@@ -4,6 +4,8 @@
 
 My dotfiles spread across MacOS for my JavaScript development setup.
 
+I put my [.bash_profile](https://gist.github.com/frankievalentine/804a8177373dda2a04b702e6a2dfd43c) and [.bashrc](https://gist.github.com/frankievalentine/ba9cac49ed9c4a5abb390f5d04f9f111) on my Gists before I made this repo. Check them out!
+
 > IMPORTANT: don't copy and paste take a look at what would work best for you. I suggest starting with downloading VS Code extensions.
 
 ### Installation
