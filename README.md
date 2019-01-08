@@ -1,6 +1,6 @@
 # dotfiles
 
-![](https://www.dropbox.com/s/rkj1r2tykt6m8jo/Screenshot%202019-01-07%2018.17.37.png?)
+![](https://i.imgur.com/o8u9Lbx.png)
 
 My dotfiles spread across MacOS for my JavaScript development setup.
 
