@@ -1,0 +1,48 @@
+{
+    "eslint.enable": true,
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.fontSize": 14,
+    "editor.renderIndentGuides": false,
+    "editor.wordWrap": "on",
+    "javascript.format.enable": false,
+    "git.autofetch": true,
+    "prettier.eslintIntegration": true,
+    "window.zoomLevel": -1,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 300000,
+    "html.format.wrapLineLength": 0,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#FF7042",
+        "list.activeSelectionForeground": "#FF7042",
+        "list.inactiveSelectionForeground": "#FF7042",
+        "list.highlightForeground": "#FF7042",
+        "scrollbarSlider.activeBackground": "#FF704250",
+        "editorSuggestWidget.highlightForeground": "#FF7042",
+        "textLink.foreground": "#FF7042",
+        "progressBar.background": "#FF7042",
+        "pickerGroup.foreground": "#FF7042",
+        "tab.activeBorder": "#FF7042",
+        "notificationLink.foreground": "#FF7042"
+    },
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "react",
+        "vue"
+    ],
+    "materialTheme.fixIconsRunning": false
+    // "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Firefox 2.app"
+}
