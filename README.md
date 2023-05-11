@@ -1,24 +1,81 @@
-# dotfiles
+<p align="center"><img src="images/banner.png"></p>
 
-![](https://i.imgur.com/o8u9Lbx.png)
+## Introduction
 
-My dotfiles spread across MacOS for my JavaScript development setup.
+This repository is a resource to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed here.
 
-I put my [.bash_profile](https://gist.github.com/frankievalentine/804a8177373dda2a04b702e6a2dfd43c) and [.bashrc](https://gist.github.com/frankievalentine/ba9cac49ed9c4a5abb390f5d04f9f111) on my Gists before I made this repo. Check them out!
+## A Fresh macOS Setup
 
-> IMPORTANT: don't copy and paste take a look at what would work best for you. I suggest starting with downloading VS Code extensions.
+These instructions are for setting up new Mac devices. Instead, if you want to get started building your own dotfiles, you can [find those instructions below](#your-own-dotfiles).
 
-### Installation
+### Create a separate volume to test install (optionally)
 
-You can clone the repository wherever you want. (I like to keep it in ~/Projects/dotfiles)
+After you've set up your new Mac you may want to wipe and clean install your old Mac. Follow [Installing macOS on a separate APFS volume - Apple Support](https://support.apple.com/en-us/HT208891) to do that. Don't forget to backup before messing with Disk Utility.
 
-```git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles```
+### Backup your data
 
-### macOS defaults
-When setting up a new Mac, you may want to set some sensible macOS defaults. I use the ```.macos``` file for these commands.
+If you're migrating from an existing Mac, you should first make sure to backup all of your existing data. Go through the checklist below to make sure you didn't forget anything before you migrate.
 
-### Homebrew
-When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formulae (after installing Homebrew, of course). I use the ```.brewfile``` to install some necessary programs to my machine, take a look for yourself if you have them go ahead and ignore this file.
+- Did you commit and push any changes/branches to your git repositories?
+- Did you remember to save all important documents from non-iCloud directories?
+- Did you save all of your work from apps which aren't synced through iCloud?
+- Did you remember to export important data from your local database?
+<!-- - Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`? -->
 
-### Feedback
-Suggestions/improvements [welcome](https://github.com/frankievalentine/dotfiles/issues)!
+### Setting up your Mac
+
+After backing up your old Mac you may now follow these install instructions to setup a new one.
+
+1. Update macOS to the latest version through system preferences
+2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
+
+   ```zsh
+   curl https://raw.githubusercontent.com/frankievalentine/dotfiles/HEAD/ssh.sh | sh -s "<your-email-address>"
+   ```
+
+3. Clone this repo to `~/.dotfiles` with:
+
+   ```zsh
+   git clone --recursive git@github.com:frankievalentine/dotfiles.git ~/.dotfiles
+   ```
+
+4. Run the installation with:
+
+   ```zsh
+   cd ~/.dotfiles && ./dots.sh
+   ```
+
+   <!--
+
+
+5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore` -->
+6. Restart your computer to finalize the process
+
+Your Mac is now ready to use!
+
+> 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the reference in the [`.zshrc`](./.zshrc#L2) file.
+
+## Your Own Dotfiles
+
+If you want to start with your own dotfiles from this setup, it's pretty easy to do so. First of all you'll need to fork this repo. After that you can tweak it the way you want.
+
+Go through the [`.macos`](./.macos) file and adjust the settings to your liking. You can find much more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
+
+Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://formulae.brew.sh/cask/) to check if the app you want to install is available.
+
+Check out the [`aliases.zsh`](./aliases.zsh) file and add your own aliases. If you need to tweak your `$PATH` check out the [`path.zsh`](./path.zsh) file. These files get loaded in because the `$ZSH_CUSTOM` setting points to the `.dotfiles` directory. You can adjust the [`.zshrc`](./.zshrc) file to your liking.
+
+When installing these dotfiles for the first time you'll need to backup all of your settings with Mackup. Install Mackup and backup your settings with the commands below. Your settings will be synced to iCloud so you can use them to sync between computers and reinstall them when reinstalling your Mac. If you want to save your settings to a different directory or different storage than iCloud, [checkout the documentation](https://github.com/lra/mackup/blob/master/doc/README.md#storage). Also make sure your `.zshrc` file is symlinked from your dotfiles repo to your home directory.
+
+```zsh
+brew install mackup
+mackup backup
+```
+
+You can tweak these to your preferences, including settings and much more. Make sure to go through the files and make them your own!
+
+Enjoy!
+
+<!-- ## Thanks To...
+
+I first got the idea for starting this project by visiting the [GitHub does dotfiles](https://dotfiles.github.io/) project. Both [Zach Holman](https://github.com/holman/dotfiles) and [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) were great sources of inspiration. [Sourabh Bajaj](https://twitter.com/sb2nov/)'s [Mac OS X Setup Guide](http://sourabhbajaj.com/mac-setup/) proved to be invaluable. Thanks to [@subnixr](https://github.com/subnixr) for [his awesome Zsh theme](https://github.com/subnixr/minimal)! Thanks to [Caneco](https://twitter.com/caneco) for the header in this readme. And lastly, I'd like to thank [Emma Fabre](https://twitter.com/anahkiasen) for [her excellent presentation on Homebrew](https://speakerdeck.com/anahkiasen/a-storm-homebrewin) which made me migrate a lot to a [`Brewfile`](./Brewfile) and [Mackup](https://github.com/lra/mackup). -->
