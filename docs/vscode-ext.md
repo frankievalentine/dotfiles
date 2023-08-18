@@ -1,56 +1,137 @@
-## Extensions
-[:emojisense: - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=bierner.emojisense)
+## Core Extensions
 
-[Atom Keymap - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
+[Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode)
 
-[Auto Close Tag - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+[Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
 
-[Better TOML - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
+[Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 
-[Bracket Pair Colorizer - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+[AWS Toolkit](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode)
 
-[Color Highlight - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+[Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
 
-[Debugger for Chrome - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+[Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
 
-[DotENV - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+[Carbon Now](https://marketplace.visualstudio.com/items?itemName=ericadamski.carbon-now-sh)
 
-[ES7 React/Redux/GraphQL/React-Native snippets - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+[Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
 
-[ESLint - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+[Deno](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)
 
-[Git History - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
-[GraphQL for VSCode - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=kumar-harsh.graphql-for-vscode)
+[DotENV](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode)
 
-[Import Cost - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+[EdgeDB](https://marketplace.visualstudio.com/items?itemName=magicstack.edgedb)
 
-[npm - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
+[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-[Path Intellisense - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+[Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 
-[Prettier - Code formatter - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+[Excalidraw](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor)
 
-[Sass - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
+[Fauna](https://marketplace.visualstudio.com/items?itemName=fauna.fauna)
 
-[Simple React Snippets - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
+[Gist](https://marketplace.visualstudio.com/items?itemName=kenhowardpdx.vscode-gist)
 
-[Sublime Babel - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=joshpeng.sublime-babel-vscode)
+[Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
 
-[Vetur - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+[Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 
-[vscode-styled-components - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+[Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
 
-[Vue VSCode Snippets - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
+[Github Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)
 
+[Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
-### Themes:
+[GraphQL Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax)
+
+[GraphQL Inline Operation Execution](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-execution)
+
+[Height Code to Task](https://marketplace.visualstudio.com/items?itemName=Height.height-vscode)
+
+[Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+
+[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+[Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+
+[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
+[Markmap](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode)
+
+[MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)
+
+[Microsoft Edge Tools for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools)
+
+[MJML](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml)
+
+[npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+
+[Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+
+[Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
+
+[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+[Prisma](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)
+
+[Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+
+[Remote SSH - Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit)
+
+[Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer)
+
+[Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
+
+[Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+
+[Tailwind CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+
+## Theming
+
 [Atom One Dark Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
+
+[Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
 
 [Atom One Light Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight)
 
-[Github Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=thomaspink.theme-github)
+[Bluloco Light Theme](https://marketplace.visualstudio.com/items?itemName=uloco.theme-bluloco-light)
 
-[Material Icon Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+[Carbon Product Icons](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon)
 
-[Material Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
+[City Lights icons](https://marketplace.visualstudio.com/items?itemName=Yummygum.city-lights-icon-vsc)
+
+[City Lights Theme](https://marketplace.visualstudio.com/items?itemName=Yummygum.city-lights-theme)
+
+[Cyberpunk](https://marketplace.visualstudio.com/items?itemName=max-SS.cyberpunk)
+
+[Daybreak](https://marketplace.visualstudio.com/items?itemName=mtdmali.daybreak-theme)
+
+[Deepdark Material Theme](https://marketplace.visualstudio.com/items?itemName=Nimda.deepdark-material)
+
+[Dracula](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+
+[Easy Light](https://marketplace.visualstudio.com/items?itemName=fransyrcc.easy-light)
+
+[Fluent icons](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons)
+
+[Framer Syntax](https://marketplace.visualstudio.com/items?itemName=Framer.framer-syntax)
+
+[Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
+
+[Material icons](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
+[Monochrome](https://marketplace.visualstudio.com/items?itemName=anotherglitchinthematrix.monochrome)
+
+[New Moon Syntax](https://marketplace.visualstudio.com/items?itemName=taniarascia.new-moon-vscode)
+
+[Night Owl Black](https://marketplace.visualstudio.com/items?itemName=thedavej.night-owl-black)
+
+[One Hunter Theme](https://marketplace.visualstudio.com/items?itemName=RaillyHugo.one-hunter)
+
+[Palenight Theme](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme)
+
+[Sorcerer](https://marketplace.visualstudio.com/items?itemName=MarkThomasMiller.sorcerer)
+
+[White](https://marketplace.visualstudio.com/items?itemName=arthurwhite.white)

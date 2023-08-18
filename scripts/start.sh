@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
 # Used when comparing installed CLI tools versus latest available via softwareupate
 autoload is-at-least
@@ -142,8 +142,7 @@ get_available_cli_tool_installs() {
 xcode_cli_tools() {
     # Check for and install Xcode CLI tools
 
-    # Trick softwareupdate into giving us everything it knows about Xcode CLI tools by
-    # touching the following file to /tmp
+    # Trick softwareupdate into giving us everything it knows about Xcode CLI tools by touching the following file to /tmp
     xclt_tmp="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
     /usr/bin/touch "$xclt_tmp"
 
@@ -332,8 +331,6 @@ brew_doctor() {
 ########################################################################################
 ############################ MAIN LOGIC - DO NOT MODIFY BELOW ##########################
 ########################################################################################
-
-# Do not modify the below, there be dragons. Modify at your own risk.
 
 logging "info" "--- Start homebrew install log ---"
 logging "info" "Script verion: $VERSION"

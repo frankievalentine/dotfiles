@@ -1,78 +1,72 @@
-# Install GNU core utilities (those that come with OS X are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+# Install core utilities (those that come with OS X are outdated).
 brew "coreutils"
 
-# Install some other useful utilities like `sponge`.
+# Install some other useful utilities.
 brew "moreutils"
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew "findutils"
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew "gnu-sed"
 
-# Add to PATH to use normal grep commands 
-# PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
-brew "grep"
-brew "openssh"
+# Install `find`, `locate`, `updatedb`...
+brew "findutils"
+
+# Taps
+# Note on Casks: Some casks may not be the most up to date version and may be broken
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/cask-fonts"
+tap 'homebrew/bundle'
+tap 'buo/cask-upgrade'
+
+# Font util
+brew "font-util"
 
 # Install other necessary binaries.
+brew "grep"
+brew "gnu-sed"
+brew "openssh"
 brew "wget"
 brew "ruby"
 brew "zsh"
 brew "bash"
 brew "bash-completion"
+brew "btop"
 brew "git"
 brew "hub"
 brew "gh"
 brew "ccat"
 brew "exa"
 brew "bat"
-brew "cloudflared"
+brew "atuin"
 brew "mkcert"
 brew "trash"
+brew "mackup"
 brew "mas"
-brew "flyctl"
-brew "colima"
-brew "fauna-shell"
+brew "navi"
+
+# Development binaries
 brew "doctl"
 brew "awscli"
-brew "navi"
-brew "deno"
 brew "mysql-client"
+brew "cloudflared"
+brew "orbstack"
+# Apple Silicon VM's
+brew "cirruslabs/cli/tart"
+# Misc VM's
+brew "hashicorp/tap/hashicorp-vagrant"
+# Github Actions locally
+brew "act"
 
-# Tap the cask
-tap "homebrew/cask"
+# Optional binaries
+brew 'pngquant'
+brew 'svgo'
+brew 'gifsicle'
+brew "flyctl"
+brew "deno"
+brew "railway"
 
-# Core casks
-cask "alfred"
-cask "raycast"
-cask "iterm2"
-cask "visual-studio-code"
-cask "stats"
-cask "docker"
-
-## Firefox Developer Edition
-tap "homebrew/cask-versions"
-cask "firefox-developer-edition"
-
-# Development tool casks
-cask "tableplus"
-cask "github"
-cask "postman"
-cask "postman-cli"
-cask "altair-graphql-client"
-cask "transmit"
-cask "fing-cli"
-cask "multipass"
-cask "tailscale"
-
-# Design casks
-cask "figma"
-cask "framer"
-cask "iconset"
+# Drop in CLI replacement for Docker Desktop
+# brew "colima"
 
 # Fonts
 # To search: brew search "/font-/"
-tap "homebrew/cask-fonts"
 brew "font-inter"
 brew "font-rubik"
 brew "font-damion"
@@ -143,12 +137,39 @@ brew "font-tinos-nerd-font"
 brew "font-ubuntu-nerd-font"
 brew "font-victor-mono-nerd-font"
 
+# Still need to install Apple Fonts at Apple Developer
+
+# Core casks
+cask "raycast"
+cask "iterm2"
+cask "visual-studio-code"
+cask "stats"
+
+cask "firefox-developer-edition"
+cask "microsoft-edge"
+
+# Development tool casks
+cask "dbngin"
+cask "github"
+cask "postman"
+cask "postman-cli"
+cask "altair-graphql-client"
+cask "transmit"
+cask "fing-cli"
+cask "tailscale"
+cask "tableplus"
+# Window's VM's on Mac
+cask "utm"
+
+
+# Design casks
+cask "figma"
+cask "framer"
+
 # Misc casks
-#cask "google-chrome"
 cask "1password"
 # 1password-cli Requires password
 cask "1password-cli"
-# cask "rectangle"
 cask "hiddenbar"
 cask "notion"
 cask "appcleaner"
@@ -158,29 +179,43 @@ cask "slack"
 cask "zoom"
 cask "discord"
 cask "obsidian"
+cask "obs"
+cask "iina"
 cask "keka"
 cask "timemachineeditor"
 cask "fantastical"
 cask "numi"
-# cask "keycastr"
-cask "alt-tab"
-cask "monitorcontrol"
 cask "pictogram"
 cask "protonvpn"
 cask "tradingview"
 cask "todoist"
-cask "signal"
-cask "telegram"
 
+
+# Optional casks
+# cask "google-chrome" (Firefox Developer Edition instead of Chrome)
+# cask "docker" (Orbstack instead of Docker Desktop)
+# cask "alfred" (Raycast instead of Alfred)
+# cask "keycastr" (KeyStroke Pro instead of KeyCastr)
+# cask "rectangle" (Magnet instead of Rectangle)
+# cask "signal"
+# cask "telegram"
+# cask "alt-tab"
+# cask "monitorcontrol"
+
+# Untap
+untap "homebrew/cask-versions"
+untap "homebrew/cask-fonts"
+untap 'homebrew/bundle'
+
+# Configure this to your own Mac App Store downloads/purchases
 # Install Mac App Store apps (listed under your purchased apps in the App Store)
 # Search using 'mas search "APP NAME"'
 # mas "Slack", id: 803453959
 mas "Magnet", id: 441258766
-mas "Hi Sticky: Notes SE + Widget", id: 1610634186
 mas "Klack", id: 2143728525
 mas "KeyStroke Pro", id: 1572206224
+mas "Cursor Pro", id: 1447043133
 mas "Parcel - Delivery Tracking", id: 639968404
-
 
 
 # Example Brewfile for reference

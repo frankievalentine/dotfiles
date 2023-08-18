@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Ask for the administrator password upfront
 sudo -v
@@ -9,6 +9,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ##############################################################
 # General System                                                       
 ##############################################################
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "Frankie's MacBook Pro"
+sudo scutil --set HostName "Frankie's MacBook Pro"
+sudo scutil --set LocalHostName "Frankie's MacBook Pro"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's MacBook Pro"
 
 # Disable startup chime
 sudo nvram StartupMute=%01
@@ -72,7 +77,7 @@ defaults write com.apple.finder AppleShowAllFiles -boolean true
 defaults write com.apple.dock showhidden -boolean true
 
 # Show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -boolean true
+# defaults write NSGlobalDomain AppleShowAllExtensions -boolean true
 
 # Show status bar
 defaults write com.apple.finder ShowStatusBar -boolean true
@@ -175,35 +180,10 @@ defaults write com.apple.Safari SuppressSearchSuggestions -boolean true
 # Show the full URL in the address bar (note: this still hides the scheme)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -boolean true
 
-# Set Safari’s home page to `about:blank` for faster loading
-defaults write com.apple.Safari HomePage -string "about:blank"
-
-# Prevent Safari from opening ‘safe’ files automatically after downloading
-defaults write com.apple.Safari AutoOpenSafeDownloads -boolean false
-
-# Hide Safari’s bookmarks bar by default
-defaults write com.apple.Safari ShowFavoritesBar -boolean false
-
-# Hide Safari’s sidebar in Top Sites
-defaults write com.apple.Safari ShowSidebarInTopSites -boolean false
-
-# Disable Safari’s thumbnail cache for History and Top Sites
-defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
-
-# Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -boolean true
-
-# Remove useless icons from Safari’s bookmarks bar
-defaults write com.apple.Safari ProxiesInBookmarksBar "()"
-
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -boolean true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -boolean true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -boolean true
-
-# Add a context menu item for showing the Web Inspector in web views
-defaults write NSGlobalDomain WebKitDeveloperExtras -boolean true
-
 
 ##############################################################
 # Mac App Store                                                            
@@ -224,8 +204,10 @@ for app in "Activity Monitor" "cfprefsd" \
     "Safari"; do
     killall "${app}" > /dev/null 2>&1
 done
-echo "Done. Note that some of these changes require a logout/restart of your OS to take effect.  At a minimum, be sure to restart your Terminal."
 
+echo ""
+echo ""
+echo "Done. Note that some of these changes require a logout/restart to take effect."
 
 ##############################################################
 # Optional                                                

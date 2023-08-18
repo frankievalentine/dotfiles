@@ -1,15 +1,35 @@
+# use bat file viewer instead of cat
 alias cat="bat"
+# exa list all with icons
 alias l="exa -a -l -g --icons"
+# exa list all
 alias ls="exa -a"
+# exa list file tree
 alias lt="exa --tree --level=2 -a"
+# list ip
 alias ip="ipconfig getifaddr en0"
+# list public ip address
 alias publicip="curl ifconfig.me && echo"
-
-alias brewup="brew update; brew upgrade; brew cleanup; brew doctor; brew autoremove;"
-alias ohzshupgrade="upgrade_oh_my_zsh"
+# produce picture.svg.png from .svg that is 1000 pixels wide
+alias convertimage="qlmanage -t -s 1000 -o . picture.svg"
+# open zshconfig in vscode
 alias zshconfig="code ~/.zshrc"
+# show all global packages
 alias packages="ls -l /usr/local/bin"
+# always use pnpm instead of npm
+alias npm="pnpm"
 # alias code="open -b com.microsoft.VSCode"
+
+
+# global brew command
+alias brewup="brew update; brew upgrade; brew cleanup; brew doctor; brew autoremove;"
+
+# start brew cu (cask --latest) update
+alias brewcu="brew cu -facy"
+
+# upgrade oh my zsh
+# alias ohzshupgrade="upgrade_oh_my_zsh"
+
 
 # Window Title with Host/Directory
 # function precmd () {

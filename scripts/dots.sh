@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Ask for the administrator password upfront
 sudo -v
@@ -21,6 +21,7 @@ echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
+echo ""
 sudo ./start.sh && brew bundle
 
  # Run the cli script
@@ -38,6 +39,7 @@ echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
+echo ""
 ./cli.sh
 
  # Run the mac script
@@ -55,6 +57,7 @@ echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
+echo ""
 ./mac.sh
 
  # Create SSH key
@@ -72,11 +75,14 @@ echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
+echo ""
 ./ssh.sh
 
 echo "------------------------------"
 echo "------------------------------"
+echo ""
 echo "Completed running .dots!!! Restart your computer to ensure all updates take effect"
+echo ""
 echo "------------------------------"
 echo "------------------------------"
 

@@ -108,7 +108,6 @@
   "javascript.suggest.paths": false,
   "typescript.suggest.paths": false,
   // MISC
-  "atomKeymap.promptV3Features": true,
   // "window.zoomLevel": -0.5,
   "editor.wordWrap": "on",
   "editor.cursorBlinking": "smooth",
@@ -120,6 +119,12 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 300000,
   "git.autofetch": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "aws.telemetry": false,
+  "editor.codeActionsOnSave": {},
   "html.format.wrapLineLength": 0,
   "terminal.integrated.fontWeightBold": "normal",
   "terminal.integrated.cursorStyle": "underline",
@@ -170,17 +175,4 @@
   //   "key": "/Users/frankievalentine/Code/localhost.key", //full path
   //   "passphrase": ""
   // },
-  "fauna.adminSecretKey": "fnAENq_Fr4ACRfvID-0WmsinTC8H_cwmN0RMHDIm",
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.enabled": false,
-  "editor.inlineSuggest.enabled": true,
-  "terminal.external.osxExec": "iTerm.app",
-  "snyk.advanced.cliPath": "/Users/frankievalentine/Library/Application Support/snyk-ls/snyk-macos",
-  "snyk.trustedFolders": [
-    "/Users/frankievalentine/Dev/portfolio",
-    "/Users/frankievalentine/Dev/v3"
-  ],
-  "snyk.yesWelcomeNotification": false,
-  "aws.telemetry": false,
-  "editor.codeActionsOnSave": {}
 }

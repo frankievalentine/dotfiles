@@ -4,15 +4,22 @@
 
 This repository is a resource to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed here.
 
-## A Fresh macOS Setup
+## Setup
 
 These instructions are for setting up new Mac devices. Instead, if you want to get started building your own dotfiles, you can [find those instructions below](#your-own-dotfiles).
 
-### Create a separate volume to test install (optionally)
+### Create a separate volume to test install (optional)
 
 After you've set up your new Mac you may want to wipe and clean install your old Mac. Follow [Installing macOS on a separate APFS volume - Apple Support](https://support.apple.com/en-us/HT208891) to do that. Don't forget to backup before messing with Disk Utility.
 
 ### Backup your data
+
+When installing these dotfiles for the first time you'll need to backup all of your settings with Mackup. Install Mackup and backup your settings with the commands below. Your settings will be synced to iCloud so you can use them to sync between computers and reinstall them when reinstalling your Mac. If you want to save your settings to a different directory or different storage than iCloud, [checkout the documentation](https://github.com/lra/mackup/blob/master/doc/README.md#storage). Also make sure your `.zshrc` file is symlinked from your dotfiles repo to your home directory.
+
+```zsh
+brew install mackup
+mackup backup
+```
 
 If you're migrating from an existing Mac, you should first make sure to backup all of your existing data. Go through the checklist below to make sure you didn't forget anything before you migrate.
 
@@ -22,7 +29,53 @@ If you're migrating from an existing Mac, you should first make sure to backup a
 - Did you remember to export important data from your local database?
 - Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`?
 
-### Setting up your Mac
+## What's inside
+
+A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
+above and see what components may mesh up with you.
+[Fork it](https://github.com/frankievalentine/dotfiles/fork), remove what you don't
+use, and build on what you do use.
+
+## Components
+
+There's a few special files in the hierarchy.
+
+- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
+  available everywhere.
+- **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
+  environment.
+- **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
+  expected to setup `$PATH` or similar.
+- **topic/completion.zsh**: Any file named `completion.zsh` is loaded
+  last and is expected to setup autocomplete.
+- **topic/install.sh**: Any file named `install.sh` is executed when you run `script/install`. To avoid being loaded automatically, its extension is `.sh`, not `.zsh`.
+- **topic/\*.symlink**: Any file ending in `*.symlink` gets symlinked into
+  your `$HOME`. This is so you can keep all of those versioned in your dotfiles
+  but still keep those autoloaded files in your home directory. These get
+  symlinked in when you run `script/bootstrap`.
+
+## Install
+
+Run this:
+
+```sh
+git clone https://github.com/frankievalentine/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+script/
+```
+
+This will symlink the appropriate files in `.dotfiles` to your home directory.
+Everything is configured and tweaked within `~/.dotfiles`.
+
+The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
+which sets up a few paths that'll be different on your particular machine.
+
+`dot` is a simple script that installs some dependencies, sets sane macOS
+defaults, and so on. Tweak this script, and occasionally run `dot` from
+time to time to keep your environment fresh and up-to-date. You can find
+this script in `bin/`.
+
+### Step by step
 
 After backing up your old Mac you may now follow these install instructions to setup a new one.
 
@@ -52,7 +105,7 @@ Your Mac is now ready to use!
 
 > 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the reference in the [`.zshrc`](./.zshrc#L2) file.
 
-## Your Own Dotfiles
+## Make it your own!
 
 If you want to start with your own dotfiles from this setup, it's pretty easy to do so. First of all you'll need to fork this repo. After that you can tweak it the way you want.
 
@@ -62,16 +115,20 @@ Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to inst
 
 Check out the [`aliases.zsh`](./aliases.zsh) file and add your own aliases. If you need to tweak your `$PATH` check out the [`path.zsh`](./path.zsh) file. These files get loaded in because the `$ZSH_CUSTOM` setting points to the `.dotfiles` directory. You can adjust the [`.zshrc`](./.zshrc) file to your liking.
 
-When installing these dotfiles for the first time you'll need to backup all of your settings with Mackup. Install Mackup and backup your settings with the commands below. Your settings will be synced to iCloud so you can use them to sync between computers and reinstall them when reinstalling your Mac. If you want to save your settings to a different directory or different storage than iCloud, [checkout the documentation](https://github.com/lra/mackup/blob/master/doc/README.md#storage). Also make sure your `.zshrc` file is symlinked from your dotfiles repo to your home directory.
+## Bugs
 
-```zsh
-brew install mackup
-mackup backup
-```
+I want this to work for everyone; that means when you clone it down it should
+work for you even though you may not have `rbenv` installed, for example. That
+said, I do use this as _my_ dotfiles, so there's a good chance I may break
+something if I forget to make a check for a dependency.
 
-You can tweak these to your preferences, including settings and much more. Make sure to go through the files and make them your own!
+If you're brand-new to the project and run into any blockers, please
+[open an issue](https://github.com/frankievalentine/dotfiles/issues) on this repository
+and I'd love to get it fixed for you!
 
-Enjoy!
+---
+
+**Enjoy!**
 
 <!-- ## Thanks To...
 
