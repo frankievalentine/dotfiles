@@ -44,7 +44,7 @@ time to time to keep your environment fresh and up-to-date.
 
 If you want to start with your own dotfiles from this setup, it's pretty easy to do so. First of all you'll need to fork this repo. After that you can tweak it the way you want.
 
-Go through the [`.macos`](./scripts/.mac.sh) file and adjust the settings to your liking.
+Go through the [`.macos`](./scripts/mac.sh) file and adjust the settings to your liking.
 
 Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://formulae.brew.sh/cask/) to check if the app you want to install is available.
 
