@@ -4,6 +4,8 @@
 
 This repository is a resource to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed here.
 
+> The default setup of these dotfiles are highly focused on web development, but can be customized otherwise for your specific stacks.
+
 ## Setup
 
 These instructions are for setting up new Mac devices. Instead, if you want to get started building your own dotfiles, you can [find those instructions below](#your-own-dotfiles).
