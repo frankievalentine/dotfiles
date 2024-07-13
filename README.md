@@ -1,4 +1,4 @@
-<p align="center"><img src=""></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/244c4bfb-4dc5-4d22-a9c3-d45f12ab9a12"></p>
 
 ## Introduction
 
@@ -130,7 +130,7 @@ and I'd love to get it fixed for you!
 
 **Enjoy!**
 
-<p align="center"><img src=""></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/6174b7fc-086e-46bc-8917-f78b8745b785"></p>
 
 <!-- ## Thanks To...
 
