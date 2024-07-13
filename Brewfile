@@ -15,7 +15,8 @@ tap "homebrew/cask-fonts"
 tap 'homebrew/bundle'
 tap 'buo/cask-upgrade'
 # Optional taps
-tap 'oven-sh/bun'
+# for bun.sh
+#tap 'oven-sh/bun'
 
 # Font util
 brew "font-util"
@@ -63,16 +64,18 @@ brew "cirruslabs/cli/tart"
 brew "hashicorp/tap/hashicorp-vagrant"
 # Github Actions locally
 brew "act"
-# Bun
-brew "bun"
-
-# Optional binaries
-brew 'pngquant'
-brew 'svgo'
-brew 'gifsicle'
+# Fly.io CLI
 brew "flyctl"
-brew "deno"
-brew "railway"
+
+
+# Optional, but recommended binaries
+#brew 'pngquant'
+#brew 'svgo'
+#brew 'gifsicle'
+#
+#brew "deno"
+#brew "railway"
+#brew "bun"
 #brew "awscli"
 #brew "doctl"
 #brew "colima" (not needed with Orbstack)
@@ -151,7 +154,7 @@ brew "font-tinos-nerd-font"
 brew "font-ubuntu-nerd-font"
 brew "font-victor-mono-nerd-font"
 
-# Still need to install Apple Fonts from Apple Developer
+# Apple developer fonts not available via brew
 
 # Core casks
 cask "google-chrome"
