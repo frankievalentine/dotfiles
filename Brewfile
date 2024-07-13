@@ -14,6 +14,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/cask-fonts"
 tap 'homebrew/bundle'
 tap 'buo/cask-upgrade'
+# Optional taps
+tap 'oven-sh/bun'
 
 # Font util
 brew "font-util"
@@ -27,32 +29,42 @@ brew "ruby"
 brew "zsh"
 brew "bash"
 brew "bash-completion"
+brew "neovim"
 brew "btop"
+brew "bottom"
+brew "lazygit"
+brew "gdu"
 brew "git"
 brew "hub"
+brew "libpq"
 brew "gh"
+brew "fd"
 brew "ccat"
-brew "exa"
+brew "eza" # replacement for exa (no longer maintained)
 brew "bat"
+brew "httpstat"
+brew "zoxide"
 brew "atuin"
 brew "mkcert"
 brew "trash"
 brew "mackup"
 brew "mas"
 brew "navi"
+brew "tmux"
 
 # Development binaries
-brew "doctl"
-brew "awscli"
 brew "mysql-client"
 brew "cloudflared"
-brew "orbstack"
+# Kubernetes Package Manager
+brew "helm"
 # Apple Silicon VM's
 brew "cirruslabs/cli/tart"
 # Misc VM's
 brew "hashicorp/tap/hashicorp-vagrant"
 # Github Actions locally
 brew "act"
+# Bun
+brew "bun"
 
 # Optional binaries
 brew 'pngquant'
@@ -61,15 +73,16 @@ brew 'gifsicle'
 brew "flyctl"
 brew "deno"
 brew "railway"
-
-# Drop in CLI replacement for Docker Desktop
-# brew "colima"
+#brew "awscli"
+#brew "doctl"
+#brew "colima" (not needed with Orbstack)
 
 # Fonts
 # To search: brew search "/font-/"
 brew "font-inter"
 brew "font-rubik"
 brew "font-damion"
+brew "font-monaspace"
 brew "font-raleway"
 brew "font-montserrat"
 brew "font-input"
@@ -109,6 +122,7 @@ brew "font-dejavu-sans-mono-nerd-font"
 brew "font-droid-sans-mono-nerd-font"
 brew "font-fantasque-sans-mono-nerd-font"
 brew "font-fira-code-nerd-font"
+brew "font-geist-mono-nerd-font"
 brew "font-go-mono-nerd-font"
 brew "font-gohufont-nerd-font"
 brew "font-hack-nerd-font"
@@ -137,47 +151,52 @@ brew "font-tinos-nerd-font"
 brew "font-ubuntu-nerd-font"
 brew "font-victor-mono-nerd-font"
 
-# Still need to install Apple Fonts at Apple Developer
+# Still need to install Apple Fonts from Apple Developer
 
 # Core casks
+cask "google-chrome"
+cask "arc"
 cask "raycast"
-cask "iterm2"
-cask "visual-studio-code"
 cask "stats"
 
-cask "firefox-developer-edition"
-cask "microsoft-edge"
-
 # Development tool casks
+cask "visual-studio-code"
+cask "warp"
 cask "dbngin"
-cask "github"
+cask "github" # Github Desktop
+cask "httpie"
 cask "postman"
-cask "postman-cli"
+# cask "postman-cli" (Optional)
 cask "altair-graphql-client"
 cask "transmit"
-cask "fing-cli"
 cask "tailscale"
 cask "tableplus"
+cask "mongodb-compass"
+# Includes Docker, Docker Compose, and Kubernetes
+cask "orbstack"
 # Window's VM's on Mac
 cask "utm"
-
 
 # Design casks
 cask "figma"
 cask "framer"
+cask "spline"
+cask "rive"
 
 # Misc casks
 cask "1password"
-# 1password-cli Requires password
 cask "1password-cli"
 cask "hiddenbar"
+cask "itsycal"
 cask "notion"
 cask "appcleaner"
 cask "imageoptim"
 cask "spotify"
 cask "slack"
 cask "zoom"
+cask "reminders-menubar"
 cask "discord"
+cask "parsec"
 cask "obsidian"
 cask "obs"
 cask "iina"
@@ -187,27 +206,27 @@ cask "fantastical"
 cask "numi"
 cask "pictogram"
 cask "protonvpn"
-cask "tradingview"
-cask "todoist"
-
+cask "copilot"
 
 # Optional casks
-# cask "google-chrome" (Firefox Developer Edition instead of Chrome)
-# cask "docker" (Orbstack instead of Docker Desktop)
+# cask "docker" (Using Orbstack instead)
 # cask "alfred" (Raycast instead of Alfred)
 # cask "keycastr" (KeyStroke Pro instead of KeyCastr)
 # cask "rectangle" (Magnet instead of Rectangle)
-# cask "signal"
-# cask "telegram"
-# cask "alt-tab"
-# cask "monitorcontrol"
+# cask "tradingview"
+# cask "todoist"
+# cask "microsoft-edge" (Optional)
+# cask "firefox-developer-edition" (Optional)
+# cask "brave-browser" (Optional)
+# cask "chromium --no-quarantine" (Optional)
 
 # Untap
-untap "homebrew/cask-versions"
-untap "homebrew/cask-fonts"
-untap 'homebrew/bundle'
+# untap "homebrew/cask-versions"
+# untap "homebrew/cask-fonts"
+# untap 'homebrew/bundle'
 
 # Configure this to your own Mac App Store downloads/purchases
+
 # Install Mac App Store apps (listed under your purchased apps in the App Store)
 # Search using 'mas search "APP NAME"'
 # mas "Slack", id: 803453959
@@ -216,6 +235,9 @@ mas "Klack", id: 2143728525
 mas "KeyStroke Pro", id: 1572206224
 mas "Cursor Pro", id: 1447043133
 mas "Parcel - Delivery Tracking", id: 639968404
+
+
+
 
 
 # Example Brewfile for reference

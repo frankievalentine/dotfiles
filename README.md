@@ -1,4 +1,4 @@
-<p align="center"><img src="images/banner.png"></p>
+<p align="center"><img src=""></p>
 
 ## Introduction
 
@@ -129,6 +129,8 @@ and I'd love to get it fixed for you!
 ---
 
 **Enjoy!**
+
+<p align="center"><img src=""></p>
 
 <!-- ## Thanks To...
 

@@ -78,6 +78,18 @@ echo "------------------------------"
 echo ""
 ./ssh.sh
 
+ # Install Google ALL Web Fonts
+echo "Making sure script is executable"
+echo "------------------------------"
+echo ""
+chmod +x ./ssh.sh
+echo ""
+echo "------------------------------"
+echo "Executing"
+echo "------------------------------"
+echo ""
+./ssh.sh
+
 echo "------------------------------"
 echo "------------------------------"
 echo ""
