@@ -18,27 +18,13 @@ brew install fnm
 eval "$(fnm env --use-on-cd)"
 fnm install --lts --corepack-enabled
 
-# Dev tools after install of Node
-# pnpm
-brew install pnpm
+# Corepack enable
+corepack install --global pnpm@latest
+corepack install --global yarn@latest
 
 # yarn
 yarn exec env
-yarn set version berry
-
-# PlanetScale CLI
-brew install planetscale/tap/pscale
-
-# Global packages (Not recommended now using run scripts instead)
-# pnpm add -g tsc
-# pnpm add -g vercel
-# pnpm add -g gatsby-cli
-# pnpm add -g @vue/cli
-# pnpm add -g netlify-cli
-# pnpm add -g @11ty/eleventy
-# pnpm add -g @sveltejs/kit
-# pnpm add -g lighthouse
-# pnpm add -g composerize
+yarn set version stable
 
 # Zsh plugins
 mkdir ~/.zsh
@@ -50,6 +36,17 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Warp themes
 mkdir ~/.warp
 git clone https://github.com/warpdotdev/themes.git ~/.warp/
+
+# Global packages (Not recommended now using run scripts instead)
+# pnpm add -g tsc
+# pnpm add -g vercel
+# pnpm add -g gatsby-cli
+# pnpm add -g @vue/cli
+# pnpm add -g netlify-cli
+# pnpm add -g @11ty/eleventy
+# pnpm add -g @sveltejs/kit
+# pnpm add -g lighthouse
+# pnpm add -g composerize
 
 # Source .zshrc
 source ~/.zshrc

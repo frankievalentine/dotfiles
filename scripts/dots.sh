@@ -9,38 +9,20 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Run the start script
 echo ""
 echo "------------------------------"
-echo "Starting setup, including xcode tooling, homebrew, and Brewfile"
+echo "Starting setup, including xcode tooling, homebrew, etc."
 echo "------------------------------"
 echo ""
 echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ./start.sh
+chmod +x ./scripts/start.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
 echo ""
-sudo ./start.sh && brew bundle
-
- # Run the cli script
-echo ""
-echo "------------------------------"
-echo "Setting up CLI's"
-echo "------------------------------"
-echo ""
-echo "------------------------------"
-echo "Making sure script is executable"
-echo "------------------------------"
-echo ""
-chmod +x ./cli.sh
-echo ""
-echo "------------------------------"
-echo "Executing"
-echo "------------------------------"
-echo ""
-./cli.sh
+sudo ./scripts/start.sh 
 
  # Run the mac script
 echo ""
@@ -52,53 +34,72 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ./mac.sh
+chmod +x ./scripts/mac.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
 echo ""
-./mac.sh
+./scripts/mac.sh
+
+ # Run the cli script
+echo ""
+echo "------------------------------"
+echo "Setting up Node, yarn, and executing Brewfile"
+echo "------------------------------"
+echo ""
+echo "------------------------------"
+echo "Making sure script is executable"
+echo "------------------------------"
+echo ""
+chmod +x ./scripts/cli.sh
+echo ""
+echo "------------------------------"
+echo "Executing"
+echo "------------------------------"
+echo ""
+./scripts/cli.sh && brew bundle
 
  # Create SSH key
 echo ""
 echo "------------------------------"
-echo "Creating SSH key"
+echo "Creating SSH key and copying to Github"
 echo "------------------------------"
 echo ""
 echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ./ssh.sh
+chmod +x ./scripts/ssh.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
 echo ""
-./ssh.sh
+./scripts/ssh.sh
 
- # Install Google ALL Web Fonts
+ # Install ALL Google Web Fonts
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ./ssh.sh
+chmod +x ./scripts/gfonts.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
 echo ""
-./ssh.sh
+./scripts/gfonts.sh
 
+# Finished
 echo "------------------------------"
 echo "------------------------------"
 echo ""
-echo "Completed running .dots!!! Restart your computer to ensure all updates take effect"
+echo "Completed running .dots!!! Restarting terminal session... and restart system to finish setup."
 echo ""
 echo "------------------------------"
 echo "------------------------------"
 
 # Restart terminal session
 echo "------------------------------"
-echo "Restarting terminal session."
+echo ""
 exec -l $SHELL
