@@ -58,6 +58,8 @@ brew "mysql-client"
 brew "cloudflared"
 # Kubernetes Package Manager
 brew "helm"
+# Kubernetes Compose Conversion Tool
+brew "kompose"
 # Apple Silicon VM's
 brew "cirruslabs/cli/tart"
 # Misc VM's
@@ -67,34 +69,23 @@ brew "act"
 # Fly.io CLI
 brew "flyctl"
 
-
 # Optional, but recommended binaries
 #brew 'pngquant'
 #brew 'svgo'
 #brew 'gifsicle'
-#
 #brew "deno"
 #brew "railway"
 #brew "bun"
 #brew "awscli"
 #brew "doctl"
-#brew "colima" (not needed with Orbstack)
 
 # Fonts
+# Most not available in Google Fonts install
 # To search: brew search "/font-/"
-brew "font-inter"
-brew "font-rubik"
-brew "font-damion"
 brew "font-monaspace"
-brew "font-raleway"
-brew "font-montserrat"
 brew "font-input"
 brew "font-gilbert"
-brew "font-lato"
-brew "font-roboto"
-brew "font-roboto-mono"
 brew "font-cascadia-code"
-brew "font-ibm-plex-mono"
 brew "font-monoid"
 brew "font-qwigley"
 brew "font-hasklig"
@@ -166,7 +157,7 @@ cask "stats"
 cask "visual-studio-code"
 cask "warp"
 cask "dbngin"
-cask "github" # Github Desktop
+cask "github"
 cask "httpie"
 cask "postman"
 # cask "postman-cli" (Optional)
@@ -190,34 +181,32 @@ cask "rive"
 cask "1password"
 cask "1password-cli"
 cask "hiddenbar"
+cask "chatgpt"
 cask "itsycal"
 cask "notion"
-cask "appcleaner"
-cask "imageoptim"
-cask "spotify"
 cask "slack"
 cask "zoom"
 cask "reminders-menubar"
 cask "discord"
-cask "parsec"
 cask "obsidian"
 cask "obs"
 cask "iina"
 cask "keka"
 cask "timemachineeditor"
-cask "fantastical"
 cask "numi"
 cask "pictogram"
+cask "nucleo"
 cask "protonvpn"
-cask "copilot"
 
 # Optional casks
-# cask "docker" (Using Orbstack instead)
+# cask "docker" (Orbstack instead of Docker Desktop)
 # cask "alfred" (Raycast instead of Alfred)
 # cask "keycastr" (KeyStroke Pro instead of KeyCastr)
 # cask "rectangle" (Magnet instead of Rectangle)
-# cask "tradingview"
-# cask "todoist"
+# cask "tradingview" (Optional trading application)
+# cask "webull" (Optional trading application)
+# cask "ledger-live" (Optional trading application)
+# cask "todoist" (Reminders instead of Todoist)
 # cask "microsoft-edge" (Optional)
 # cask "firefox-developer-edition" (Optional)
 # cask "brave-browser" (Optional)
@@ -233,13 +222,10 @@ cask "copilot"
 # Install Mac App Store apps (listed under your purchased apps in the App Store)
 # Search using 'mas search "APP NAME"'
 # mas "Slack", id: 803453959
-mas "Magnet", id: 441258766
-mas "Klack", id: 2143728525
-mas "KeyStroke Pro", id: 1572206224
-mas "Cursor Pro", id: 1447043133
-mas "Parcel - Delivery Tracking", id: 639968404
-
-
+mas "Magnet", id: 441258766 # (Paid, Optional can use Raycast Window Management)
+mas "Klack", id: 2143728525 # (Paid, Optional)
+mas "KeyStroke Pro", id: 1572206224 # (Paid, Optional)
+mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
 
 
 

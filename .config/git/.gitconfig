@@ -1,0 +1,22 @@
+[user]
+	name = Frankie
+	email = 26727138+frankievalentine@users.noreply.github.com
+[alias]
+	a = add
+	ca = commit -a
+	cam = commit -am
+	s = status
+	pom = push origin master
+	pog = push origin gh-pages
+	puom = pull origin master
+	puog = pull origin gh-pages
+	cob = checkout -b
+[color]
+	ui = auto
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
