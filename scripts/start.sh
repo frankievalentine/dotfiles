@@ -81,39 +81,6 @@ check_brew_install_status() {
     fi
 }
 
-rosetta2_check() {
-    # Check for and install Rosetta2 if needed.
-    # $1: processor_brand
-
-    # Determine the processor brand
-    if [[ "$1" == *"Apple"* ]]; then
-        logging "info" "Apple Processor is present..."
-
-        # Check if the Rosetta service is running
-        check_rosetta_status=$(/usr/bin/pgrep oahd)
-
-        # Rosetta Folder location
-        # Condition check to see if the Rosetta folder exists. This check was added
-        # because the Rosetta2 service is already running in macOS versions 11.5 and
-        # greater without Rosseta2 actually being installed.
-        rosetta_folder="/Library/Apple/usr/share/rosetta"
-
-        if [[ -n $check_rosetta_status ]] && [[ -e $rosetta_folder ]]; then
-            logging "info" "Rosetta2 is installed... no action needed"
-
-        else
-            logging "info" "Rosetta is not installed... installing now"
-
-            # Installs Rosetta
-            /usr/sbin/softwareupdate --install-rosetta --agree-to-license |
-                /usr/bin/tee -a "${LOG_PATH}"
-        fi
-
-    else
-        logging "info" "Apple Processor is not present...Rosetta2 is not needed"
-    fi
-}
-
 get_available_cli_tool_installs() {
     # Return the latest available CLI tools.
 

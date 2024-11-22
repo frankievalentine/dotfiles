@@ -22,6 +22,8 @@ alias code='open -b com.microsoft.VSCode'
 alias p="pnpm"
 # clean pnpm cache
 alias cleanpnpm="pnpm store prune"
+# clean node modules
+alias npkill="npx npkill"
 # kamal
 alias kamal='docker run -it --rm -v "${PWD}:/workdir" -v "/run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock" -e SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/basecamp/kamal:latest'
 

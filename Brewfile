@@ -39,6 +39,7 @@ brew "git"
 brew "hub"
 brew "libpq"
 brew "gh"
+brew "uv" # python package and project manager (no need for pip)
 brew "fd"
 brew "ccat"
 brew "eza" # replacement for exa (no longer maintained)
@@ -168,8 +169,9 @@ cask "tableplus"
 cask "mongodb-compass"
 # Includes Docker, Docker Compose, and Kubernetes
 cask "orbstack"
-# Window's VM's on Mac
+# Run VM's on Mac
 cask "utm"
+cask "virtualbuddy"
 
 # Design casks
 cask "figma"
