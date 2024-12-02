@@ -1,4 +1,4 @@
-echo "Installing all Google Web Fonts onto your System"
+echo "Installing all Google Web Fonts onto your System. This may take up to 30 minutes."
 echo "Downloading the fonts..."
 curl -L https://github.com/google/fonts/archive/main.tar.gz -o /tmp/master.tar.gz
 echo "Extracting the fonts..."

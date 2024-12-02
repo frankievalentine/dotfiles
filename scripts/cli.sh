@@ -18,7 +18,7 @@ brew install fnm
 eval "$(fnm env --use-on-cd)"
 fnm install --lts --corepack-enabled
 
-# Corepack enable
+# Corepack install pnpm, yarn
 corepack install --global pnpm@latest
 corepack install --global yarn@latest
 
@@ -27,7 +27,7 @@ yarn exec env
 yarn set version stable
 
 # Zsh plugins
-mkdir ~/.zsh
+mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting

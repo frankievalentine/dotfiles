@@ -88,7 +88,24 @@ echo "------------------------------"
 echo "Executing"
 echo "------------------------------"
 echo ""
-./scripts/gfonts.sh
+./scripts/fonts.sh
+
+# Restart terminal session
+echo "------------------------------"
+echo ""
+exec -l $SHELL
+
+ # Make apps persistent on the dock
+echo "Making sure script is executable"
+echo "------------------------------"
+echo ""
+chmod +x ./scripts/apps.sh
+echo ""
+echo "------------------------------"
+echo "Executing"
+echo "------------------------------"
+echo ""
+./scripts/apps.sh
 
 # Finished
 echo "------------------------------"

@@ -12,7 +12,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "Frankie's MacBook Pro"
 sudo scutil --set HostName "Frankie's MacBook Pro"
-sudo scutil --set LocalHostName "Frankie's MacBook Pro"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's MacBook Pro"
 
 # Disable startup chime
@@ -96,7 +95,7 @@ defaults write com.apple.finder DisableAllAnimations -boolean true
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "incv"DE
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -boolean true
@@ -169,22 +168,6 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-###############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
-
-# Privacy: don’t send search queries to Apple
-defaults write com.apple.Safari UniversalSearchEnabled -boolean false
-defaults write com.apple.Safari SuppressSearchSuggestions -boolean true
-
-# Show the full URL in the address bar (note: this still hides the scheme)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -boolean true
-
-# Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -boolean true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -boolean true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -boolean true
-
 ##############################################################
 # Mac App Store                                                            
 ##############################################################
@@ -216,7 +199,6 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 # Set computer name (as done via System Preferences → Sharing)
 # sudo scutil --set ComputerName "0x6D746873"
 # sudo scutil --set HostName "0x6D746873"
-# sudo scutil --set LocalHostName "0x6D746873"
 # sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x6D746873"
 
 # Set standby delay to 24 hours (default is 1 hour or 3600)

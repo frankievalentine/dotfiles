@@ -9,17 +9,12 @@ brew "findutils"
 
 # Taps
 # Note on Casks: Some casks may not be the most up to date version and may be broken
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-tap "homebrew/cask-fonts"
 tap 'homebrew/bundle'
+tap 'mongodb/brew'
 tap 'buo/cask-upgrade'
 # Optional taps
 # for bun.sh
 #tap 'oven-sh/bun'
-
-# Font util
-brew "font-util"
 
 # Install other necessary binaries.
 brew "grep"
@@ -53,18 +48,16 @@ brew "mackup"
 brew "mas"
 brew "navi"
 brew "tmux"
+brew "flox"
 
 # Development binaries
 brew "mysql-client"
+brew "mongodb-community@8.0"
 brew "cloudflared"
 # Kubernetes Package Manager
 brew "helm"
 # Kubernetes Compose Conversion Tool
 brew "kompose"
-# Apple Silicon VM's
-brew "cirruslabs/cli/tart"
-# Misc VM's
-brew "hashicorp/tap/hashicorp-vagrant"
 # Github Actions locally
 brew "act"
 # Fly.io CLI
@@ -80,71 +73,75 @@ brew "flyctl"
 #brew "awscli"
 #brew "doctl"
 
-# Fonts
+# Font util
+brew "font-util"
+
+# Fonts + Nerd Fonts
 # Most not available in Google Fonts install
 # To search: brew search "/font-/"
-brew "font-monaspace"
-brew "font-input"
-brew "font-gilbert"
-brew "font-cascadia-code"
-brew "font-monoid"
-brew "font-qwigley"
-brew "font-hasklig"
-brew "font-covered-by-your-grace"
-brew "font-league-gothic"
-brew "font-rambla"
-brew "font-share-tech"
-brew "font-3270-nerd-font"
-brew "font-fira-mono-nerd-font"
-brew "font-inconsolata-go-nerd-font"
-brew "font-inconsolata-lgc-nerd-font"
-brew "font-inconsolata-nerd-font"
-brew "font-monofur-nerd-font"
-brew "font-overpass-nerd-font"
-brew "font-ubuntu-mono-nerd-font"
-brew "font-agave-nerd-font"
-brew "font-arimo-nerd-font"
-brew "font-anonymice-nerd-font"
-brew "font-aurulent-sans-mono-nerd-font"
-brew "font-bigblue-terminal-nerd-font"
-brew "font-bitstream-vera-sans-mono-nerd-font"
-brew "font-blex-mono-nerd-font"
-brew "font-caskaydia-cove-nerd-font"
-brew "font-code-new-roman-nerd-font"
-brew "font-cousine-nerd-font"
-brew "font-daddy-time-mono-nerd-font"
-brew "font-dejavu-sans-mono-nerd-font"
-brew "font-droid-sans-mono-nerd-font"
-brew "font-fantasque-sans-mono-nerd-font"
-brew "font-fira-code-nerd-font"
-brew "font-geist-mono-nerd-font"
-brew "font-go-mono-nerd-font"
-brew "font-gohufont-nerd-font"
-brew "font-hack-nerd-font"
-brew "font-hasklug-nerd-font"
-brew "font-heavy-data-nerd-font"
-brew "font-hurmit-nerd-font"
-brew "font-im-writing-nerd-font"
-brew "font-iosevka-nerd-font"
-brew "font-jetbrains-mono-nerd-font"
-brew "font-lekton-nerd-font"
-brew "font-liberation-nerd-font"
-brew "font-meslo-lg-nerd-font"
-brew "font-monoid-nerd-font"
-brew "font-mononoki-nerd-font"
-brew "font-mplus-nerd-font"
-brew "font-noto-nerd-font"
-brew "font-open-dyslexic-nerd-font"
-brew "font-profont-nerd-font"
-brew "font-proggy-clean-tt-nerd-font"
-brew "font-roboto-mono-nerd-font"
-brew "font-sauce-code-pro-nerd-font"
-brew "font-shure-tech-mono-nerd-font"
-brew "font-space-mono-nerd-font"
-brew "font-terminess-ttf-nerd-font"
-brew "font-tinos-nerd-font"
-brew "font-ubuntu-nerd-font"
-brew "font-victor-mono-nerd-font"
+cask "font-monaspace"
+cask "font-input"
+cask "font-gilbert"
+cask "font-cascadia-code"
+cask "font-monoid"
+cask "font-qwigley"
+cask "font-hasklig"
+cask "font-covered-by-your-grace"
+cask "font-league-gothic"
+cask "font-rambla"
+cask "font-share-tech"
+cask "font-3270-nerd-font"
+cask "font-ibm-plex-mono"
+cask "font-fira-mono-nerd-font"
+cask "font-inconsolata-go-nerd-font"
+cask "font-inconsolata-lgc-nerd-font"
+cask "font-inconsolata-nerd-font"
+cask "font-monofur-nerd-font"
+cask "font-overpass-nerd-font"
+cask "font-ubuntu-mono-nerd-font"
+cask "font-agave-nerd-font"
+cask "font-arimo-nerd-font"
+cask "font-anonymice-nerd-font"
+cask "font-aurulent-sans-mono-nerd-font"
+cask "font-bigblue-terminal-nerd-font"
+cask "font-bitstream-vera-sans-mono-nerd-font"
+cask "font-blex-mono-nerd-font"
+cask "font-caskaydia-cove-nerd-font"
+cask "font-code-new-roman-nerd-font"
+cask "font-cousine-nerd-font"
+cask "font-daddy-time-mono-nerd-font"
+cask "font-dejavu-sans-mono-nerd-font"
+cask "font-droid-sans-mono-nerd-font"
+cask "font-fantasque-sans-mono-nerd-font"
+cask "font-fira-code-nerd-font"
+cask "font-geist-mono-nerd-font"
+cask "font-go-mono-nerd-font"
+cask "font-gohufont-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-hasklug-nerd-font"
+cask "font-heavy-data-nerd-font"
+cask "font-hurmit-nerd-font"
+cask "font-im-writing-nerd-font"
+cask "font-iosevka-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-lekton-nerd-font"
+cask "font-liberation-nerd-font"
+cask "font-meslo-lg-nerd-font"
+cask "font-monoid-nerd-font"
+cask "font-mononoki-nerd-font"
+cask "font-mplus-nerd-font"
+cask "font-noto-nerd-font"
+cask "font-open-dyslexic-nerd-font"
+cask "font-profont-nerd-font"
+cask "font-proggy-clean-tt-nerd-font"
+cask "font-roboto-mono-nerd-font"
+cask "font-sauce-code-pro-nerd-font"
+cask "font-shure-tech-mono-nerd-font"
+cask "font-space-mono-nerd-font"
+cask "font-terminess-ttf-nerd-font"
+cask "font-tinos-nerd-font"
+cask "font-ubuntu-nerd-font"
+cask "font-victor-mono-nerd-font"
 
 # Apple developer fonts not available via brew
 
@@ -153,14 +150,19 @@ cask "google-chrome"
 cask "arc"
 cask "raycast"
 cask "stats"
+cask "appcleaner"
 
 # Development tool casks
+cask "iterm2"
 cask "visual-studio-code"
+cask "cursor"
+# cask "hyper" (Optional)
 cask "warp"
 cask "dbngin"
 cask "github"
 cask "httpie"
 cask "postman"
+cask "beekeeper-studio"
 # cask "postman-cli" (Optional)
 cask "altair-graphql-client"
 cask "transmit"
@@ -172,6 +174,7 @@ cask "orbstack"
 # Run VM's on Mac
 cask "utm"
 cask "virtualbuddy"
+cask "vagrant"
 
 # Design casks
 cask "figma"
@@ -200,6 +203,16 @@ cask "pictogram"
 cask "nucleo"
 cask "protonvpn"
 
+# Configure this to your own Mac App Store downloads/purchases
+
+# Install Mac App Store apps (listed under your purchased apps in the App Store)
+# Search using 'mas search "APP NAME"'
+# mas "Slack", id: 803453959
+mas "Magnet", id: 441258766 # (Paid, Optional can use Raycast Window Management)
+mas "Klack", id: 6446206067 # (Paid, Optional)
+mas "KeyStroke Pro", id: 1572206224 # (Paid, Optional)
+mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
+
 # Optional casks
 # cask "docker" (Orbstack instead of Docker Desktop)
 # cask "alfred" (Raycast instead of Alfred)
@@ -213,22 +226,6 @@ cask "protonvpn"
 # cask "firefox-developer-edition" (Optional)
 # cask "brave-browser" (Optional)
 # cask "chromium --no-quarantine" (Optional)
-
-# Untap
-# untap "homebrew/cask-versions"
-# untap "homebrew/cask-fonts"
-# untap 'homebrew/bundle'
-
-# Configure this to your own Mac App Store downloads/purchases
-
-# Install Mac App Store apps (listed under your purchased apps in the App Store)
-# Search using 'mas search "APP NAME"'
-# mas "Slack", id: 803453959
-mas "Magnet", id: 441258766 # (Paid, Optional can use Raycast Window Management)
-mas "Klack", id: 2143728525 # (Paid, Optional)
-mas "KeyStroke Pro", id: 1572206224 # (Paid, Optional)
-mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
-
 
 
 # Example Brewfile for reference
