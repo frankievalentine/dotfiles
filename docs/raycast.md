@@ -1,1 +1,3 @@
-<!-- Raycast config and extensions -->
+# Raycast config and extensions
+
+

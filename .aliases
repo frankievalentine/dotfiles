@@ -1,0 +1,63 @@
+# global update command
+alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew doctor; brew autoremove;"
+
+# start brew cu (cask --latest) update
+alias brewcu="brew cu -facy"
+
+# use bat file viewer instead of cat
+alias cat="bat -p"
+
+# eza list all with icons
+alias l="eza -a -l -g --icons"
+
+# eza list all
+alias ls="eza -a"
+
+# eza list file tree
+alias lt="eza --tree --level=2 -a"
+
+# list ip
+alias ip="ipconfig getifaddr en0"
+
+# list public ip address
+alias publicip="curl ifconfig.me && echo"
+
+# open zshconfig in vscode
+alias zshconfig="code ~/.zshrc"
+
+# show all global packages
+alias packages="ls -l /usr/local/bin"
+
+# open a directory in VSCode
+alias code='open -b com.microsoft.VSCode'
+
+# shorthand pnpm
+alias p="pnpm"
+
+# clean pnpm cache
+alias cleanpnpm="pnpm store prune"
+
+# clean node modules
+alias npkill="npx npkill"
+
+# update package.json using bun
+alias bunupdatepkg="bunx npm-check-updates -u && bun install"
+
+# update package.json using bun
+alias pnpmupdatepkg="pnpx npm-check-updates -u && pnpm install"
+
+# kamal
+alias kamal='docker run -it --rm -v "${PWD}:/workdir" -v "/run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock" -e SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/basecamp/kamal:latest'
+
+# produce picture.svg.png from .svg that is 1000 pixels wide (use Raycast for image conversion)
+# alias convertimage="qlmanage -t -s 1000 -o . picture.svg"
+
+# upgrade oh my zsh
+# alias ohzshupgrade="upgrade_oh_my_zsh"
+
+# Neovim aliases
+alias v='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim

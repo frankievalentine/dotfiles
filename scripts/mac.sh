@@ -1,24 +1,18 @@
 #!/bin/sh
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 ##############################################################
 # General System                                                       
 ##############################################################
-# Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Frankie's MacBook Pro"
-sudo scutil --set HostName "Frankie's MacBook Pro"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's MacBook Pro"
+# Set computer name (as done via System Settings → General → Sharing)
+sudo scutil --set ComputerName "Frankie's Mac"
+sudo scutil --set HostName "Frankie's Mac"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's Mac"
 
 # Disable startup chime
 sudo nvram StartupMute=%01
 
 # Set DNS to Cloudflare (Wi-Fi)
-networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
+networksetup -setdnsservers "Wi-Fi" 1.1.1.1 1.0.0.1
 #networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1
 
 ##############################################################
@@ -51,9 +45,6 @@ networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -169,16 +160,6 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ##############################################################
-# Mac App Store                                                            
-##############################################################
-
-# Enable the WebKit Developer Tools in the Mac App Store
-defaults write com.apple.appstore WebKitDeveloperExtras -boolean true
-
-# Enable Debug Menu in the Mac App Store
-defaults write com.apple.appstore ShowDebugMenu -boolean true
-
-##############################################################
 # Kill affected applications                                                  
 ##############################################################
 
@@ -191,6 +172,11 @@ done
 echo ""
 echo ""
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo ""
+echo "------------------------------"
+echo "Running brew bundle."
+echo "------------------------------"
+echo ""
 
 ##############################################################
 # Optional                                                
@@ -214,7 +200,7 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 # networksetup -setmanual "Ethernet" 192.168.2.100 255.255.255.0 192.168.2.1
 
 # Set the computer to sleep after 60 minutes
-#sudo systemsetup -setcomputersleep 60
+# sudo systemsetup -setcomputersleep 60
 
 # Add a Space to Dock
 # defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'

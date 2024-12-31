@@ -1,3 +1,11 @@
+# Taps
+# Note on Casks: Some casks may not be the most up to date version and may be broken
+tap "homebrew/bundle"
+tap "mongodb/brew"
+tap "buo/cask-upgrade"
+tap "oven-sh/bun"
+tap "shaunsingh/SFMono-Nerd-Font-Ligaturized"
+
 # Install core utilities (those that come with OS X are outdated).
 brew "coreutils"
 
@@ -7,28 +15,24 @@ brew "moreutils"
 # Install `find`, `locate`, `updatedb`...
 brew "findutils"
 
-# Taps
-# Note on Casks: Some casks may not be the most up to date version and may be broken
-tap 'homebrew/bundle'
-tap 'mongodb/brew'
-tap 'buo/cask-upgrade'
-# Optional taps
-# for bun.sh
-#tap 'oven-sh/bun'
-
 # Install other necessary binaries.
 brew "grep"
+brew "ripgrep"
 brew "gnu-sed"
 brew "openssh"
 brew "wget"
 brew "ruby"
 brew "zsh"
+brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions"
 brew "bash"
 brew "bash-completion"
 brew "neovim"
+brew "tmux"
+brew "lazygit"
+brew "fzf"
 brew "btop"
 brew "bottom"
-brew "lazygit"
 brew "gdu"
 brew "git"
 brew "hub"
@@ -47,12 +51,12 @@ brew "trash"
 brew "mackup"
 brew "mas"
 brew "navi"
-brew "tmux"
-brew "flox"
 
 # Development binaries
+brew "deno"
+brew "bun"
 brew "mysql-client"
-brew "mongodb-community@8.0"
+brew "mongodb-community"
 brew "cloudflared"
 # Kubernetes Package Manager
 brew "helm"
@@ -67,9 +71,7 @@ brew "flyctl"
 #brew 'pngquant'
 #brew 'svgo'
 #brew 'gifsicle'
-#brew "deno"
 #brew "railway"
-#brew "bun"
 #brew "awscli"
 #brew "doctl"
 
@@ -81,17 +83,22 @@ brew "font-util"
 # To search: brew search "/font-/"
 cask "font-monaspace"
 cask "font-input"
+cask "font-geist"
 cask "font-gilbert"
 cask "font-cascadia-code"
 cask "font-monoid"
 cask "font-qwigley"
 cask "font-hasklig"
 cask "font-covered-by-your-grace"
+cask "font-ia-writer-duo"
+cask "font-ia-writer-mono"
+cask "font-ia-writer-quattro"
 cask "font-league-gothic"
 cask "font-rambla"
 cask "font-share-tech"
-cask "font-3270-nerd-font"
 cask "font-ibm-plex-mono"
+cask "font-sf-mono-nerd-font-ligaturized"
+cask "font-3270-nerd-font"
 cask "font-fira-mono-nerd-font"
 cask "font-inconsolata-go-nerd-font"
 cask "font-inconsolata-lgc-nerd-font"
@@ -126,7 +133,6 @@ cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-lekton-nerd-font"
 cask "font-liberation-nerd-font"
-cask "font-meslo-lg-nerd-font"
 cask "font-monoid-nerd-font"
 cask "font-mononoki-nerd-font"
 cask "font-mplus-nerd-font"
@@ -143,8 +149,6 @@ cask "font-tinos-nerd-font"
 cask "font-ubuntu-nerd-font"
 cask "font-victor-mono-nerd-font"
 
-# Apple developer fonts not available via brew
-
 # Core casks
 cask "google-chrome"
 cask "arc"
@@ -154,27 +158,30 @@ cask "appcleaner"
 
 # Development tool casks
 cask "iterm2"
+cask "ghostty"
+cask "wezterm"
 cask "visual-studio-code"
 cask "cursor"
-# cask "hyper" (Optional)
-cask "warp"
 cask "dbngin"
 cask "github"
 cask "httpie"
 cask "postman"
 cask "beekeeper-studio"
-# cask "postman-cli" (Optional)
 cask "altair-graphql-client"
 cask "transmit"
 cask "tailscale"
 cask "tableplus"
 cask "mongodb-compass"
+# cask "hyper" (Optional)
+# cask "warp" (Optional)
+# cask "postman-cli" (Optional)
 # Includes Docker, Docker Compose, and Kubernetes
 cask "orbstack"
 # Run VM's on Mac
 cask "utm"
-cask "virtualbuddy"
 cask "vagrant"
+# PHP tools (php, composer, laravel, expose) - prefer to run these tools in containers
+# cask "herd" (Optional)
 
 # Design casks
 cask "figma"
@@ -210,6 +217,7 @@ cask "protonvpn"
 # mas "Slack", id: 803453959
 mas "Magnet", id: 441258766 # (Paid, Optional can use Raycast Window Management)
 mas "Klack", id: 6446206067 # (Paid, Optional)
+mas "Parcel", id: 639968404 # (Paid, Optional)
 mas "KeyStroke Pro", id: 1572206224 # (Paid, Optional)
 mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
 
@@ -226,42 +234,3 @@ mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
 # cask "firefox-developer-edition" (Optional)
 # cask "brave-browser" (Optional)
 # cask "chromium --no-quarantine" (Optional)
-
-
-# Example Brewfile for reference
-# 'brew tap'
-#tap "homebrew/cask"
-# 'brew tap' with custom Git URL
-#tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git"
-# 'brew tap' with arguments
-#tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git", force_auto_update: true
-
-# set arguments for all 'brew install --cask' commands
-#cask_args appdir: "~/Applications", require_sha: true
-
-# 'brew install'
-#brew "imagemagick"
-# 'brew install --with-rmtp', 'brew services restart' on version changes
-#brew "denji/nginx/nginx-full", args: ["with-rmtp"], restart_service: :changed
-# 'brew install', always 'brew services restart', 'brew link', 'brew unlink mysql' (if it is installed)
-#brew "mysql@5.6", restart_service: true, link: true, conflicts_with: ["mysql"]
-# install only on specified OS
-#brew "gnupg" if OS.mac?
-#brew "glibc" if OS.linux?
-
-# 'brew install --cask'
-#cask "google-chrome"
-# 'brew install --cask --appdir=~/my-apps/Applications'
-#cask "firefox", args: { appdir: "~/my-apps/Applications" }
-# bypass Gatekeeper protections (NOT RECOMMENDED)
-#cask "firefox", args: { no_quarantine: true }
-# always upgrade auto-updated or unversioned cask to latest version even if already installed
-#cask "opera", greedy: true
-# 'brew install --cask' only if '/usr/libexec/java_home --failfast' fails
-#cask "java" unless system "/usr/libexec/java_home --failfast"
-
-# 'mas install'
-#mas "1Password", id: 443987910
-
-# 'whalebrew install'
-#whalebrew "whalebrew/wget"
