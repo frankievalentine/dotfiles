@@ -31,6 +31,9 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
   --setstealthmode on \
   --setglobalstate on
 
+# Enable TouchID for sudo (only used on Macbooks and Mac systems with TouchID compatible keyboards)
+sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
+
 ##############################################################
 # General UI/UX                                                               
 ##############################################################
