@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
  # Run the mac script
 echo ""
 echo "------------------------------"
@@ -20,7 +26,7 @@ sh ~/dotfiles/scripts/mac.sh && brew bundle
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
  # Run the cli script
 echo ""
@@ -42,7 +48,7 @@ sh ~/dotfiles/scripts/cli.sh
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
 # Create SSH key
 echo ""
@@ -64,7 +70,7 @@ sh ~/dotfiles/scripts/ssh.sh
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
 # Download Google Fonts
 echo ""
@@ -86,7 +92,7 @@ sh ~/dotfiles/scripts/fonts.sh
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
 # Set persistent apps in Dock
 echo ""
@@ -108,7 +114,7 @@ sh ~/dotfiles/scripts/apps.sh
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
 # Finished
 echo "------------------------------"
@@ -122,4 +128,4 @@ echo "------------------------------"
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL

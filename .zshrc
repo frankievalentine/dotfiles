@@ -37,14 +37,8 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # iTerm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || truesdf
 
-# brew sbin in PATH
-export PATH="/usr/local/sbin:$PATH"
-
 # warp new line prompt
 PROMPT="${PROMPT}"$'\n'
-
-# libpq
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # pnpm (Now managed using Corepack)
 # export PNPM_HOME="/Users/$USER/Library/pnpm"

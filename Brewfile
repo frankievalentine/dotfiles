@@ -1,5 +1,4 @@
 # Taps
-# Note on Casks: Some casks may not be the most up to date version and may be broken
 tap "homebrew/bundle"
 tap "mongodb/brew"
 tap "buo/cask-upgrade"
@@ -192,6 +191,7 @@ cask "rive"
 # Misc casks
 cask "1password"
 cask "1password-cli"
+cask "dropbox"
 cask "hiddenbar"
 cask "chatgpt"
 cask "itsycal"

@@ -89,13 +89,14 @@ After backing up your Mac you may now follow these install instructions to setup
 5. Symlink the .dotfiles repo to your home folder using GNU stow.
 
    ```bash
-
+      cd ~/.dotfiles
+      stow .
    ```
 
 6. Run the installation with:
 
    ```bash
-   cd ~/.dotfiles && ./scripts/dots.sh
+   sh ./scripts/dots.sh
    ```
 
 7. Restart your computer to finalize the process
