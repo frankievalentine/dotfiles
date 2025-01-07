@@ -6,7 +6,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
- # Run the mac script
+# Run the mac script
 echo ""
 echo "------------------------------"
 echo "Setting up system defaults and executing Brewfile"
@@ -16,19 +16,14 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/mac.sh
+chmod +x ~/.dotfiles/scripts/mac.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/mac.sh && brew bundle
+sh ~/.dotfiles/scripts/mac.sh && brew bundle
 
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
-
- # Run the cli script
+# Run the cli script
 echo ""
 echo "------------------------------"
 echo "Setting up Corepack & fnm"
@@ -38,17 +33,12 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/cli.sh
+chmod +x ~/.dotfiles/scripts/cli.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/cli.sh
-
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
+sh ~/.dotfiles/scripts/cli.sh
 
 # Create SSH key
 echo ""
@@ -60,17 +50,12 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/ssh.sh
+chmod +x ~/.dotfiles/scripts/ssh.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/ssh.sh
-
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
+sh ~/.dotfiles/scripts/ssh.sh
 
 # Download Google Fonts
 echo ""
@@ -82,17 +67,12 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/fonts.sh
+chmod +x ~/.dotfiles/scripts/fonts.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/fonts.sh
-
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
+sh ~/.dotfiles/scripts/fonts.sh
 
 # Set persistent apps in Dock
 echo ""
@@ -104,17 +84,12 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/apps.sh
+chmod +x ~/.dotfiles/scripts/apps.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/apps.sh
-
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
+sh ~/.dotfiles/scripts/apps.sh
 
 # Finished
 echo "------------------------------"

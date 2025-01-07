@@ -68,7 +68,7 @@ After backing up your Mac you may now follow these install instructions to setup
 2. Clone this repo to `~/.dotfiles` with:
 
    ```bash
-   git clone --recursive git@github.com:frankievalentine/dotfiles.git ~/.dotfiles
+   git clone  ~/.dotfiles
    ```
 
    > 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the reference in the [`.zshrc`](./.zshrc) file.
@@ -96,7 +96,7 @@ After backing up your Mac you may now follow these install instructions to setup
 6. Run the installation with:
 
    ```bash
-   sh ./scripts/dots.sh
+      sh ./scripts/dots.sh
    ```
 
 7. Restart your computer to finalize the process

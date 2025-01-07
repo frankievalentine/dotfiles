@@ -4,6 +4,12 @@ alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 # start brew cu (cask --latest) update
 alias brewcu="brew cu -facy"
 
+# use zoxide instead of cd
+alias cd="z"
+
+# use pnpm instead of npm
+alias npm="pnpm"
+
 # use bat file viewer instead of cat
 alias cat="bat -p"
 
