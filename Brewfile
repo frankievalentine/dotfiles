@@ -156,13 +156,13 @@ cask "stats"
 cask "appcleaner"
 
 # Development tool casks
-cask "iterm2"
 cask "ghostty"
 cask "wezterm"
 cask "visual-studio-code"
 cask "cursor"
 cask "dbngin"
-cask "github"
+cask "github" # (Github Desktop)
+cask "xcodes"
 cask "httpie"
 cask "postman"
 cask "beekeeper-studio"

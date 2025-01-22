@@ -1,0 +1,12 @@
+theme = light:onehalflight,dark:oxocarbon
+font-family = Geist Mono
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 0.5
+macos-titlebar-style = transparent
+window-height = 40
+window-width = 140
+window-padding-x = 2,4
+window-padding-y = 2,4
+window-colorspace = display-p3
+macos-icon-frame = chrome
+auto-update = off
