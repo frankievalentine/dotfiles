@@ -18,6 +18,9 @@ brew install fnm
 eval "$(fnm env --use-on-cd)"
 fnm install --lts --corepack-enabled
 
+# Update Corepack
+npm install --global corepack@latest
+
 # Corepack install pnpm, yarn
 corepack install --global pnpm@latest
 corepack install --global yarn@latest

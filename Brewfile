@@ -26,6 +26,7 @@ brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "bash"
 brew "bash-completion"
+brew "stow"
 brew "neovim"
 brew "tmux"
 brew "lazygit"
@@ -47,7 +48,6 @@ brew "zoxide"
 brew "atuin"
 brew "mkcert"
 brew "trash"
-brew "mackup"
 brew "mas"
 brew "navi"
 
@@ -63,8 +63,6 @@ brew "helm"
 brew "kompose"
 # Github Actions locally
 brew "act"
-# Fly.io CLI
-brew "flyctl"
 
 # Optional, but recommended binaries
 #brew 'pngquant'
@@ -96,6 +94,7 @@ cask "font-league-gothic"
 cask "font-rambla"
 cask "font-share-tech"
 cask "font-ibm-plex-mono"
+cask "font-commit-mono"
 cask "font-sf-mono-nerd-font-ligaturized"
 cask "font-3270-nerd-font"
 cask "font-fira-mono-nerd-font"
@@ -171,16 +170,10 @@ cask "transmit"
 cask "tailscale"
 cask "tableplus"
 cask "mongodb-compass"
-# cask "hyper" (Optional)
-# cask "warp" (Optional)
-# cask "postman-cli" (Optional)
 # Includes Docker, Docker Compose, and Kubernetes
 cask "orbstack"
 # Run VM's on Mac
 cask "utm"
-cask "vagrant"
-# PHP tools (php, composer, laravel, expose) - prefer to run these tools in containers
-# cask "herd" (Optional)
 
 # Design casks
 cask "figma"
@@ -197,6 +190,8 @@ cask "chatgpt"
 cask "itsycal"
 cask "notion"
 cask "slack"
+cask "neohtop"
+cask "adobe-creative-cloud"
 cask "zoom"
 cask "reminders-menubar"
 cask "discord"
@@ -214,12 +209,14 @@ cask "protonvpn"
 
 # Install Mac App Store apps (listed under your purchased apps in the App Store)
 # Search using 'mas search "APP NAME"'
-# mas "Slack", id: 803453959
 mas "Magnet", id: 441258766 # (Paid, Optional can use Raycast Window Management)
 mas "Klack", id: 6446206067 # (Paid, Optional)
 mas "Parcel", id: 639968404 # (Paid, Optional)
 mas "KeyStroke Pro", id: 1572206224 # (Paid, Optional)
 mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
+mas "Adobe Lightroom", id: 1451544217 # (Paid, Optional)
+mas "Darkroom: Photo & Video Editor", id: 953286746 # (Paid, Optional)
+mas "DaVinci Resolve", id: 571213070 # (Free, Optional)
 
 # Optional casks
 # cask "docker" (Orbstack instead of Docker Desktop)
@@ -234,3 +231,8 @@ mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
 # cask "firefox-developer-edition" (Optional)
 # cask "brave-browser" (Optional)
 # cask "chromium --no-quarantine" (Optional)
+# cask "hyper" (Optional terminal)
+# cask "warp" (Optional terminal)
+# cask "iterm2" (Optional terminal)
+# cask "lulu" (Optional firewall replacement)
+# cask "herd" (Optional PHP tools) - prefer to run these tools in containers)
