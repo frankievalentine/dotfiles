@@ -18,10 +18,10 @@ brew install fnm
 eval "$(fnm env --use-on-cd)"
 fnm install --lts --corepack-enabled
 
-# Update Corepack
+# Update Corepack (Note: when you update npm you have to do this again)
 npm install --global corepack@latest
 
-# Corepack install pnpm, yarn
+# Corepack install pnpm, yarn (Note: when npm is updated you have to update/install pnpm and yarn for Corepack)
 corepack install --global pnpm@latest
 corepack install --global yarn@latest
 
