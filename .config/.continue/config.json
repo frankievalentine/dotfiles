@@ -1,6 +1,31 @@
 {
   "models": [
     {
+      "title": "Claude 3.7 with Thinking",
+      "provider": "anthropic",
+      "model": "claude-3-7-sonnet",
+      "apiKey": "",
+      "contextLength": 250000,
+      "requestOptions": {
+        "extraBodyProperties": {
+          "system": "When responding, first put your thinking in a JSON block with the format {\"reasoning_text\": \"your thinking here\"}. Then provide your regular answer.",
+          "thinking": {
+            "type": "enabled",
+            "budget_tokens": 8000
+          }
+        }
+      },
+      "systemMessage": "You are an expert who thinks carefully before providing solutions.",
+      "capabilities": {
+        "tools": true,
+        "uploadImage": true
+      },
+      "completionOptions": {
+        "temperature": 1,
+        "maxTokens": 16000
+      }
+    },
+    {
       "title": "Claude 3.5 Sonnet",
       "provider": "anthropic",
       "model": "claude-3-5-sonnet-20240620",
@@ -26,9 +51,9 @@
   //   "model": "starcoder2:3b"
   // },
   "tabAutocompleteModel": {
-    "title": "Codestral",
-    "provider": "mistral",
-    "model": "codestral-latest",
+    "title": "Claude",
+    "provider": "anthropic",
+    "model": "claude-3-5-sonnet-20240620",
     "apiKey": ""
   },
   "embeddingsProvider": {
