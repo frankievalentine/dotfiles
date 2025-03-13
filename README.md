@@ -30,16 +30,6 @@ above and see what components may mesh up with you.
 [Fork it](https://github.com/frankievalentine/dotfiles/fork), remove what you don't
 use, and build on what you do use.
 
-## Before Installing
-
-If you want to start with your own dotfiles from this setup, it's pretty easy to do so. First of all you'll need to fork this repo. After that you can tweak it the way you want.
-
-1. Go to the [`.mac`](./scripts/mac.sh) file and adjust the system and network name to your preferred system name.
-
-2. Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://formulae.brew.sh/cask/) to check if the app you want to install is available. There is also some Mac App Store specific apps included in this Brewfile which require you to be signed in to an Apple Account.
-
-3. Go to [`.config/git/.gitconfig`](./.config/git/.gitconfig) and update your preferred git configuration.
-
 ## Components
 
 There's a few special files in the hierarchy.
@@ -52,19 +42,29 @@ There's a few special files in the hierarchy.
 - **icons/**: This contains icons that are used for the main applications that are added to the Dock array.
 - **scripts/cli.sh**: Important software necessary to run our dots first. This step also executes our Brewfile. To note Corepack is enabled by default. If you aren't familiar with Corepack see the Node.js documentation. It includes optional global packages, but we are not using those in favor of run scripts.
 - **scripts/dots.sh**: The dotfile run script. This is where we install and configure all the apps we use.
-- **scripts/apps.sh**: This adds the necessary applications to be persistent in the Dock.
 - **scripts/mac.sh**: `mac.sh` is a simple script that installs some sane macOS
 defaults, and so on. Some of the settings aren't able to be set through this method, look to the `macos-defaults.md` file for more settings to be set manually. Tweak this script, and occasionally run `./scripts/mac.sh` from the dotfiles source directory from
 time to time to keep your environment fresh and up-to-date. A great resource to look at for considering some defaults for your own dotfiles is [MacOS Defaults](https://macos-defaults.com/).
 - **scripts/ssh.sh**: Creates an SSH key for the new machine. Otherwise login through the Github CLI to begin using git.
 
 - *Optional script* - **scripts/fonts.sh**: Installs and configures all Google fonts. It is a large install, but helpful for designing.
+- *Optional script* - **scripts/apps.sh**: This adds the necessary applications to be persistent in the Dock. Intentionally not included in the dots script because not all persistent apps are included in the Homebrew bundle installation. You can edit this to add your persistent apps and run post installation of all necessary apps.
+
+## Before Installing
+
+If you want to start with your own dotfiles from this setup, it's pretty easy to do so. First of all you'll need to fork this repo. After that you can tweak it the way you want.
+
+1. Go to the [`.mac`](./scripts/mac.sh) file and adjust the system and network name to your preferred system name.
+
+2. Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://formulae.brew.sh/cask/) to check if the app you want to install is available. There is also some Mac App Store specific apps included in this Brewfile which require you to be signed in to an Apple Account.
+
+3. Go to [`.config/git/.gitconfig`](./.config/git/.gitconfig) and update your preferred git configuration.
 
 ## Install
 
 After backing up your Mac you may now follow these install instructions to setup a new one.
 
-1. Update macOS to the latest version through system preferences
+1. Update macOS to the latest version through system preferences (if not updated already)
 
 2. Clone this repo to `~/.dotfiles` with:
 
@@ -72,9 +72,21 @@ After backing up your Mac you may now follow these install instructions to setup
    git clone --recursive git@github.com:frankievalentine/dotfiles.git ~/.dotfiles
    ```
 
-   > 💡 You can use a different location than `~/.dotfiles` if you want.
+   > 💡 PLEASE GO THROUGH 'BEFORE INSTALLING' SECTION ABOVE AFTER CLONING. You could choose a different location than `~/.dotfiles` (not recommended). If you do change the location please be sure to update the `dots.sh` script to the correct folder location.
 
-3. Install Homebrew & Command Line Tools. We want to download the Command Line Tools directly from Apple Developer.
+3. Remove the .git folder from the dotfiles `~/.dotfiles` clone to begin your own version control repository.
+
+   ```bash
+      rm -rf ~/.dotfiles/.git
+   ```
+
+4. Create a new .git repository
+
+   ```bash
+      git init ~/.dotfiles
+   ```
+
+5. Install Homebrew & Command Line Tools. We want to download the Command Line Tools directly from Apple Developer.
 
    ```bash
       # Homebrew
@@ -83,26 +95,26 @@ After backing up your Mac you may now follow these install instructions to setup
 
    > 💡 Make sure to run the commands Homebrew provides after install.
 
-4. Install GNU stow using Homebrew.
+6. Install GNU stow using Homebrew.
 
    ```bash
       brew install stow
    ```
 
-5. Symlink the .dotfiles repo to your home folder using GNU stow.
+7. Symlink the .dotfiles repo to your home folder using GNU stow.
 
    ```bash
       cd ~/.dotfiles
       stow --adopt .
    ```
 
-6. Run the installation with:
+8. Run the installation with:
 
    ```bash
       sh ./scripts/dots.sh
    ```
 
-7. Add headline oh my zsh theme, remove oh my zsh generated .zshrc
+9. Add headline oh my zsh theme, remove oh my zsh generated .zshrc
 
    ```bash
       mv ~/.dotfiles/.oh-my-zsh/themes/headline.zsh-theme ~/.oh-my-zsh/themes
