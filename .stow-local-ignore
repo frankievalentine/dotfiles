@@ -18,6 +18,13 @@ _darcs
 # ignore oh my zsh theme to be added after installation
 \.oh-my-zsh
 
+# ignore others
+\.config\vscode
+\docker
+\docs
+\icons
+\scripts
+
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
 
