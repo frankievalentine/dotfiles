@@ -53,11 +53,12 @@ There's a few special files in the hierarchy.
 - **icons/**: This contains icons that are used for the main applications that are added to the Dock array.
 - **scripts/dots.sh**: The dotfile run script. This is where we install and configure all the apps we use.
 - **scripts/apps.sh**: This adds the necessary applications to be persistent in the Dock.
-- **scripts/fonts.sh**: Installs and configures all Google fonts. I would consider this highly optional. It is a large install, but helpful for designing.
 - **scripts/mac.sh**: `mac.sh` is a simple script that installs some sane macOS
 defaults, and so on. Some of the settings aren't able to be set through this method, look to the `macos-defaults.md` file for more settings to be set manually. Tweak this script, and occasionally run `./scripts/mac.sh` from the dotfiles source directory from
 time to time to keep your environment fresh and up-to-date. A great resource to look at for considering some defaults for your own dotfiles is [MacOS Defaults](https://macos-defaults.com/).
 - **scripts/ssh.sh**: Creates an SSH key for the new machine. Otherwise login through the Github CLI to begin using git.
+
+- *Optional script* - **scripts/fonts.sh**: Installs and configures all Google fonts. It is a large install, but helpful for designing.
 
 ## Install
 

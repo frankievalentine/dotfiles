@@ -57,23 +57,6 @@ echo "Executing"
 echo ""
 sh ~/.dotfiles/scripts/ssh.sh
 
-# Download Google Fonts
-echo ""
-echo "------------------------------"
-echo "Downloading Google Fonts"
-echo "------------------------------"
-echo ""
-echo "------------------------------"
-echo "Making sure script is executable"
-echo "------------------------------"
-echo ""
-chmod +x ~/.dotfiles/scripts/fonts.sh
-echo ""
-echo "------------------------------"
-echo "Executing"
-echo ""
-sh ~/.dotfiles/scripts/fonts.sh
-
 # Set persistent apps in Dock
 echo ""
 echo "------------------------------"

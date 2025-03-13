@@ -148,7 +148,7 @@ cask "font-ubuntu-nerd-font"
 cask "font-victor-mono-nerd-font"
 
 # Core casks
-cask "google-chrome"
+cask "brave-browser"
 cask "arc"
 cask "raycast"
 cask "stats"
@@ -158,7 +158,6 @@ cask "appcleaner"
 cask "ghostty"
 cask "wezterm"
 cask "visual-studio-code"
-cask "cursor"
 cask "dbngin"
 cask "github" # (Github Desktop)
 cask "xcodes"
@@ -186,11 +185,8 @@ cask "1password"
 cask "1password-cli"
 cask "dropbox"
 cask "hiddenbar"
-cask "chatgpt"
 cask "itsycal"
 cask "notion"
-cask "slack"
-cask "neohtop"
 cask "adobe-creative-cloud"
 cask "zoom"
 cask "reminders-menubar"
@@ -229,10 +225,14 @@ mas "DaVinci Resolve", id: 571213070 # (Free, Optional)
 # cask "todoist" (Reminders instead of Todoist)
 # cask "microsoft-edge" (Optional)
 # cask "firefox-developer-edition" (Optional)
-# cask "brave-browser" (Optional)
+# cask "google-chrome" (Optional)
+# cask "cursor" (Optional to switch this with VS Code)
 # cask "chromium --no-quarantine" (Optional)
 # cask "hyper" (Optional terminal)
 # cask "warp" (Optional terminal)
 # cask "iterm2" (Optional terminal)
 # cask "lulu" (Optional firewall replacement)
 # cask "herd" (Optional PHP tools) - prefer to run these tools in containers)
+# cask "chatgpt" (Optional use Raycast AI instead)
+# cask "slack" (Optional use browser)
+# cask "neohtop" (Optional monitoring tool)
