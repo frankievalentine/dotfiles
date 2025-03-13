@@ -15,6 +15,9 @@ _darcs
 \.gitignore
 \.gitmodules
 
+# ignore oh my zsh theme to be added after installation
+\.oh-my-zsh
+
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
 

@@ -49,8 +49,8 @@ There's a few special files in the hierarchy.
 - **.ssh/**: Houses our SSH config as well as our 1Password Agent for logging in with 1Password for created SSH keys.
 - **docs/**: Any defaults not able to be configured with our dotfiles is listed in this folder as well as other Mac apps.
 - **docker/compose**: Contains collection compose files over some time that I keep as a reference and to run compose files out of using Orbstack.
-- **scripts/cli.sh**: Important software necessary to run our dots first. This step also executes our Brewfile. To note Corepack is enabled by default. If you aren't familiar with Corepack see the Node.js documentation. It includes optional global packages, but we are not using those in favor of run scripts.
 - **icons/**: This contains icons that are used for the main applications that are added to the Dock array.
+- **scripts/cli.sh**: Important software necessary to run our dots first. This step also executes our Brewfile. To note Corepack is enabled by default. If you aren't familiar with Corepack see the Node.js documentation. It includes optional global packages, but we are not using those in favor of run scripts.
 - **scripts/dots.sh**: The dotfile run script. This is where we install and configure all the apps we use.
 - **scripts/apps.sh**: This adds the necessary applications to be persistent in the Dock.
 - **scripts/mac.sh**: `mac.sh` is a simple script that installs some sane macOS
@@ -69,10 +69,10 @@ After backing up your Mac you may now follow these install instructions to setup
 2. Clone this repo to `~/.dotfiles` with:
 
    ```bash
-   git clone  ~/.dotfiles
+   git clone --recursive git@github.com:frankievalentine/dotfiles.git ~/.dotfiles
    ```
 
-   > 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the reference in the [`.zshrc`](./.zshrc) file.
+   > 💡 You can use a different location than `~/.dotfiles` if you want.
 
 3. Install Homebrew & Command Line Tools. We want to download the Command Line Tools directly from Apple Developer.
 
@@ -80,6 +80,8 @@ After backing up your Mac you may now follow these install instructions to setup
       # Homebrew
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
+
+   > 💡 Make sure to run the commands Homebrew provides after install.
 
 4. Install GNU stow using Homebrew.
 
@@ -91,7 +93,7 @@ After backing up your Mac you may now follow these install instructions to setup
 
    ```bash
       cd ~/.dotfiles
-      stow .
+      stow --adopt .
    ```
 
 6. Run the installation with:
@@ -100,7 +102,15 @@ After backing up your Mac you may now follow these install instructions to setup
       sh ./scripts/dots.sh
    ```
 
-7. Restart your computer to finalize the process
+7. Add headline oh my zsh theme, remove oh my zsh generated .zshrc
+
+   ```bash
+      mv ~/.dotfiles/.oh-my-zsh/themes/headline.zsh-theme ~/.oh-my-zsh/themes
+      rm .zshrc
+      mv .zshrc-pre-oh-my-zsh .zshrc
+      source .zshrc
+   ```
+
 
 Your Mac is now ready to use!
 

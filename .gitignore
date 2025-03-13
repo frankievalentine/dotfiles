@@ -1,4 +1,7 @@
-# I use the default .gitignore that comes with Gatsby.js
+.config/tmux/plugins
+.config/tmux/*.log
+.config/**/.tmp*
+.config/lazygit/state.yml
 
 # Logs
 logs

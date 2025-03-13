@@ -26,7 +26,6 @@ brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "bash"
 brew "bash-completion"
-brew "stow"
 brew "neovim"
 brew "tmux"
 brew "lazygit"
@@ -162,8 +161,6 @@ cask "dbngin"
 cask "github" # (Github Desktop)
 cask "xcodes"
 cask "httpie"
-cask "postman"
-cask "beekeeper-studio"
 cask "altair-graphql-client"
 cask "transmit"
 cask "tailscale"
@@ -187,7 +184,6 @@ cask "dropbox"
 cask "hiddenbar"
 cask "itsycal"
 cask "notion"
-cask "adobe-creative-cloud"
 cask "zoom"
 cask "reminders-menubar"
 cask "discord"
@@ -210,9 +206,9 @@ mas "Klack", id: 6446206067 # (Paid, Optional)
 mas "Parcel", id: 639968404 # (Paid, Optional)
 mas "KeyStroke Pro", id: 1572206224 # (Paid, Optional)
 mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
-mas "Adobe Lightroom", id: 1451544217 # (Paid, Optional)
-mas "Darkroom: Photo & Video Editor", id: 953286746 # (Paid, Optional)
-mas "DaVinci Resolve", id: 571213070 # (Free, Optional)
+# mas "Adobe Lightroom", id: 1451544217 # (Paid, Optional)
+# mas "Darkroom: Photo & Video Editor", id: 953286746 # (Paid, Optional)
+# mas "DaVinci Resolve", id: 571213070 # (Free, Optional)
 
 # Optional casks
 # cask "docker" (Orbstack instead of Docker Desktop)
@@ -236,3 +232,4 @@ mas "DaVinci Resolve", id: 571213070 # (Free, Optional)
 # cask "chatgpt" (Optional use Raycast AI instead)
 # cask "slack" (Optional use browser)
 # cask "neohtop" (Optional monitoring tool)
+# cask "postman" (Optional HTTP client prefer HTTPie)
