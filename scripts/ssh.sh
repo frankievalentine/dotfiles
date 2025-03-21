@@ -21,6 +21,11 @@ echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed2
 
 ssh-add ~/.ssh/id_ed25519
 
+echo ""
+echo ""
+echo "------------------------------"
+echo "Done creating SSH key and ssh.sh"
+
 # echo "Adding public key to GitHub. May require logging in through the gh cli."
 
 # Adding your SSH key to your GitHub account

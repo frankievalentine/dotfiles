@@ -3,7 +3,7 @@
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `dots.sh` has finished
+# Keep-alive: update existing `sudo` time stamp until the script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Run the mac script
@@ -19,18 +19,18 @@ echo "Executing"
 echo ""
 sh ~/.dotfiles/scripts/mac.sh && brew bundle
 
-# Run the cli script
+# Run the tools script
 echo ""
 echo "------------------------------"
 echo "Setting up ohmyzsh, fnm, & corepack"
 echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
-chmod +x ~/.dotfiles/scripts/cli.sh
+chmod +x ~/.dotfiles/scripts/tools.sh
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/.dotfiles/scripts/cli.sh
+sh ~/.dotfiles/scripts/tools.sh
 
 # Create SSH key
 echo ""
@@ -49,12 +49,14 @@ sh ~/.dotfiles/scripts/ssh.sh
 echo "------------------------------"
 echo "------------------------------"
 echo ""
-echo "Completed running .dots! Restarting terminal session. Be sure to also restart your computer when possible."
+echo "Completed running .dots! Restarting terminal session and final updates. Be sure to also restart your computer as soon as possible then proceed with the manual application setup."
 echo ""
 echo "------------------------------"
 echo "------------------------------"
 
-# Restart terminal session
-echo "------------------------------"
-echo ""
+# Restarting terminal session and updating Homebrew
 exec $SHELL
+
+# Final updates
+source ~/.aliases
+update

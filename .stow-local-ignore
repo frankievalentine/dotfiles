@@ -20,9 +20,9 @@ _darcs
 
 # ignore others
 \.config\vscode
+\.config\archive
 \docker
 \docs
-\icons
 \scripts
 
 .+~          # emacs backup files
