@@ -196,7 +196,7 @@ cask "timemachineeditor"
 cask "numi"
 cask "pictogram"
 cask "nucleo"
-cask "protonvpn"
+cask "private-internet-access"
 
 # Configure this to your own Mac App Store downloads/purchases
 
