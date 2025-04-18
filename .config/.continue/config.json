@@ -1,40 +1,46 @@
 {
   "models": [
+    // {
+    //   "title": "Claude 3.7 with Thinking",
+    //   "provider": "anthropic",
+    //   "model": "claude-3-7-sonnet",
+    //   "apiKey": "",
+    //   "contextLength": 250000,
+    //   "requestOptions": {
+    //     "extraBodyProperties": {
+    //       "system": "When responding, first put your thinking in a JSON block with the format {\"reasoning_text\": \"your thinking here\"}. Then provide your regular answer.",
+    //       "thinking": {
+    //         "type": "enabled",
+    //         "budget_tokens": 8000
+    //       }
+    //     }
+    //   },
+    //   "systemMessage": "You are an expert who thinks carefully before providing solutions.",
+    //   "capabilities": {
+    //     "tools": true,
+    //     "uploadImage": true
+    //   },
+    //   "completionOptions": {
+    //     "temperature": 1,
+    //     "maxTokens": 16000
+    //   }
+    // },
     {
-      "title": "Claude 3.7 with Thinking",
+      "title": "Claude 3.7 Sonnet",
       "provider": "anthropic",
-      "model": "claude-3-7-sonnet",
-      "apiKey": "",
-      "contextLength": 250000,
-      "requestOptions": {
-        "extraBodyProperties": {
-          "system": "When responding, first put your thinking in a JSON block with the format {\"reasoning_text\": \"your thinking here\"}. Then provide your regular answer.",
-          "thinking": {
-            "type": "enabled",
-            "budget_tokens": 8000
-          }
-        }
-      },
-      "systemMessage": "You are an expert who thinks carefully before providing solutions.",
-      "capabilities": {
-        "tools": true,
-        "uploadImage": true
-      },
-      "completionOptions": {
-        "temperature": 1,
-        "maxTokens": 16000
-      }
+      "model": "claude-3-7-sonnet-latest",
+      "apiKey": ""
     },
     {
       "title": "Claude 3.5 Sonnet",
       "provider": "anthropic",
-      "model": "claude-3-5-sonnet-20240620",
+      "model": "claude-3-5-sonnet-latest",
       "apiKey": ""
     },
     {
-      "title": "gpt4o-mini",
+      "title": "gpt 4.1-mini",
       "provider": "openai",
-      "model": "gpt-4o-mini",
+      "model": "gpt-4.1-mini",
       "apiKey": ""
     }
   ],
@@ -51,20 +57,27 @@
   //   "model": "starcoder2:3b"
   // },
   "tabAutocompleteModel": {
-    "title": "Claude",
+    "title": "Claude 3.7 Sonnet Autocomplete",
     "provider": "anthropic",
-    "model": "claude-3-5-sonnet-20240620",
+    "model": "claude-3-7-sonnet-latest",
     "apiKey": ""
   },
+  // "tabAutocompleteModel": {
+  //   "title": "Codestral",
+  //   "provider": "mistral",
+  //   "model": "codestral-latest",
+  //   "apiKey": "<YOUR_CODESTRAL_API_KEY>"
+  // },
   "embeddingsProvider": {
+    // "provider": "transformers.js"
     "provider": "openai",
-    "model": "voyage-code-2",
-    "apiBase": "https://api.voyageai.com/v1/",
+    "model": "text-embedding-3-large",
     "apiKey": ""
   },
   "reranker": {
-    "name": "voyage",
+    "name": "cohere",
     "params": {
+      "model": "rerank-english-v3.0",
       "apiKey": ""
     }
   },
