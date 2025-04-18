@@ -5,25 +5,43 @@
       "provider": "ollama",
       "model": "llama3.1:8b",
       "apiBase": "http://10.0.0.92:11434"
+    },
+    {
+      "title": "Qwen Coder 7B",
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b",
+      "apiBase": "http://10.0.0.92:11434"
+    },
+    {
+      "title": "Deepseek R1 8B",
+      "provider": "ollama",
+      "model": "deepseek-r1:8b",
+      "apiBase": "http://10.0.0.92:11434"
     }
   ],
   "tabAutocompleteModel": {
     "title": "Qwen2.5-Coder 1.5B",
     "provider": "ollama",
-    "model": "qwen2.5-coder:1.5b-base",
+    "model": "qwen2.5-coder:1.5b",
     "apiBase": "http://10.0.0.92:11434"
   },
+  // "tabAutocompleteModel": {
+  //   "title": "Qwen2.5-Coder 1.5B",
+  //   "provider": "ollama",
+  //   "model": "qwen2.5-coder:1.5b-base",
+  //   "apiBase": "http://10.0.0.92:11434"
+  // },
   "embeddingsProvider": {
     "provider": "ollama",
     "model": "nomic-embed-text",
     "apiBase": "http://10.0.0.92:11434"
   },
-    "reranker": {
-      "name": "cohere",
-      "params": {
-        "model": "rerank-english-v3.0",
-        "apiKey": ""
-      }
+  "reranker": {
+    "name": "cohere",
+    "params": {
+      "model": "rerank-english-v3.0",
+      "apiKey": ""
+    }
   },
   "contextProviders": [
     {
