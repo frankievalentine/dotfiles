@@ -150,10 +150,11 @@ cask "font-victor-mono-nerd-font"
 
 # Core casks
 cask "brave-browser"
-cask "arc"
+cask "zen"
 cask "raycast"
 cask "stats"
 cask "appcleaner"
+# cask "arc" (No longer supported)
 
 # Development tool casks
 cask "ghostty"
