@@ -50,6 +50,7 @@ brew "mkcert"
 brew "trash"
 brew "mas"
 brew "navi"
+brew "tree"
 brew "ffmpeg"
 
 # Development binaries
