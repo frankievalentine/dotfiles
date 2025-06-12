@@ -59,6 +59,7 @@ brew "bun"
 brew "mysql-client"
 brew "mongodb-community"
 brew "cloudflared"
+brew "biome"
 # Kubernetes Package Manager
 brew "helm"
 # Kubernetes Compose Conversion Tool
