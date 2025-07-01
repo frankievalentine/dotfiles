@@ -3,7 +3,6 @@ tap "homebrew/bundle"
 tap "mongodb/brew"
 tap "buo/cask-upgrade"
 tap "oven-sh/bun"
-tap "shaunsingh/SFMono-Nerd-Font-Ligaturized"
 
 # Install core utilities (those that come with OS X are outdated).
 brew "coreutils"
@@ -164,11 +163,11 @@ cask "wezterm"
 cask "visual-studio-code"
 cask "dbngin"
 cask "github" # (Github Desktop)
-cask "xcodes"
-cask "httpie"
+cask "xcodes-app"
+cask "httpie-desktop"
 cask "altair-graphql-client"
 cask "transmit"
-cask "tailscale"
+cask "tailscale-app"
 cask "tableplus"
 cask "mongodb-compass"
 # Includes Docker, Docker Compose, and Kubernetes
