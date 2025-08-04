@@ -161,6 +161,7 @@ cask "appcleaner"
 cask "ghostty"
 cask "wezterm"
 cask "visual-studio-code"
+cask "zed"
 cask "dbngin"
 cask "github" # (Github Desktop)
 cask "xcodes-app"

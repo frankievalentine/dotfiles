@@ -1,0 +1,64 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://10.0.0.92:11434",
+      "available_models": [
+        {
+          "name": "qwen3",
+          "display_name": "Qwen3",
+          "max_tokens": 32768,
+          "supports_tools": true,
+          "supports_thinking": true,
+          "supports_images": true
+        },
+        {
+          "name": "qwen2.5-coder",
+          "display_name": "Qwen Coder",
+          "max_tokens": 32768,
+          "supports_tools": true,
+          "supports_thinking": true,
+          "supports_images": true
+        },
+        {
+          "name": "deepseek-r1",
+          "display_name": "Deepseek",
+          "max_tokens": 32768,
+          "supports_tools": true,
+          "supports_thinking": true,
+          "supports_images": true
+        }
+      ]
+    }
+  },
+  "agent": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen3:8b"
+    }
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "terminal": {
+    "font_size": 13
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  }
+}
