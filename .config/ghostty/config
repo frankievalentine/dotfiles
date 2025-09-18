@@ -1,4 +1,5 @@
-theme = light:onehalflight,dark:oxocarbon
+window-theme = system
+theme = light:One Half Light,dark:Oxocarbon
 font-family = Geist Mono
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 0.5
