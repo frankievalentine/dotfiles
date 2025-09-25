@@ -59,17 +59,14 @@ brew "mysql-client"
 brew "mongodb-community"
 brew "cloudflared"
 brew "biome"
-# Kubernetes Package Manager
-brew "helm"
-# Kubernetes Compose Conversion Tool
-brew "kompose"
-# Github Actions locally
-brew "act"
+brew "helm" # (Kubernetes Package Manager)
+brew "kompose" # (Kubernetes Compose Conversion Tool)
+brew "act" # (GitHub Actions locally)
 
 # Optional, but recommended binaries
-#brew 'pngquant'
-#brew 'svgo'
-#brew 'gifsicle'
+#brew "pngquant"
+#brew "svgo"
+#brew "gifsicle"
 #brew "railway"
 #brew "awscli"
 #brew "doctl"
@@ -150,33 +147,32 @@ cask "font-ubuntu-nerd-font"
 cask "font-victor-mono-nerd-font"
 
 # Core casks
-cask "brave-browser"
-cask "zen"
+# see helium.computer for main browser (Helium is a fork of ungoogled-chromium)
+cask "zen" # (firefox fork)
+cask "ungoogled-chromium"
 cask "raycast"
 cask "stats"
 cask "appcleaner"
-# cask "arc" (No longer supported)
 
 # Development tool casks
-cask "ghostty"
+cask "zed" # (main code editor)
+cask "ghostty" # (main terminal)
 cask "wezterm"
 cask "visual-studio-code"
-cask "zed"
-cask "dbngin"
 cask "github" # (Github Desktop)
 cask "xcodes-app"
-cask "httpie-desktop"
+cask "bruno"
+cask "httpie-desktop" # (Bruno is main HTTP client)
 cask "altair-graphql-client"
-cask "transmit"
+cask "transmit" # (SFTP client)
 cask "tailscale-app"
+cask "dbngin"
 cask "tableplus"
 cask "mongodb-compass"
-# Includes Docker, Docker Compose, and Kubernetes
-cask "orbstack"
-# Run VM's on Mac
-cask "utm"
+cask "orbstack" # (Includes Docker, Docker Compose, and Kubernetes)
+cask "utm" # (Run VM's)
 
-# Design casks
+# Design & No Code casks
 cask "figma"
 cask "framer"
 cask "spline"
